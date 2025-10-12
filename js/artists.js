@@ -157,3 +157,6 @@ const cardJoel = document.getElementById("card-joel");
 cardJoel.addEventListener("click", () => {
   artistUpdate("joel");
 });
+
+
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
