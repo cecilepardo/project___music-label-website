@@ -94,6 +94,11 @@ const artists = {
   },
 };
 
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let interval = null;
+const title = document.querySelector("h1");
+const track = document.querySelector("h2");
+
 function artistUpdate(firstname) {
   const artist = artists[firstname];
   const nameToUpdate = document.getElementById("artistName");
@@ -125,38 +130,73 @@ function artistUpdate(firstname) {
 
 const cardJuliette = document.getElementById("card-juliette");
 cardJuliette.addEventListener("click", () => {
+  title.setAttribute("data-value", "JULIETTE");
+  track.setAttribute("data-value", "LE TEMPS");
   artistUpdate("juliette");
+  animateTitle(title);
+  animateTitle(track);
 });
 
 const cardThomas = document.getElementById("card-thomas");
 cardThomas.addEventListener("click", () => {
+  title.setAttribute("data-value", "THOMAS");
   artistUpdate("thomas");
+  animateTitle(title);
 });
 
 const cardTeddy = document.getElementById("card-teddy");
 cardTeddy.addEventListener("click", () => {
+  title.setAttribute("data-value", "TEDDY");
   artistUpdate("teddy");
+  animateTitle(title);
 });
 
 const cardCecile = document.getElementById("card-cecile");
 cardCecile.addEventListener("click", () => {
+  title.setAttribute("data-value", "CECILE");
   artistUpdate("cecile");
+  animateTitle(title);
 });
 
 const cardRomain = document.getElementById("card-romain");
 cardRomain.addEventListener("click", () => {
+  title.setAttribute("data-value", "ROMAIN");
   artistUpdate("romain");
+  animateTitle(title);
 });
 
 const cardMaxime = document.getElementById("card-maxime");
 cardMaxime.addEventListener("click", () => {
+  title.setAttribute("data-value", "MAXIME");
   artistUpdate("maxime");
+  animateTitle(title);
 });
 
 const cardJoel = document.getElementById("card-joel");
 cardJoel.addEventListener("click", () => {
+  title.setAttribute("data-value", "JOEL");
   artistUpdate("joel");
+  animateTitle(title);
 });
 
+function animateTitle(el) {
+  let iterations = 0;
 
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+  clearInterval(interval);
+
+  interval = setInterval(() => {
+    el.innerText = el.dataset.value
+      .split("")
+      .map((letter, index) => {
+        if (index < iterations) {
+          return el.dataset.value[index];
+        }
+        return letters[Math.floor(Math.random() * 26)];
+      })
+      .join("");
+
+    if (iterations >= el.dataset.value.length) clearInterval(interval);
+
+    iterations += 1 / 3;
+  }, 30);
+}
