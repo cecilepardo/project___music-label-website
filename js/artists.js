@@ -95,16 +95,22 @@ const artists = {
 };
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let interval = null;
+const intervals = new WeakMap();
 const title = document.querySelector("h1");
 const track = document.querySelector("h2");
+const track_2 = document.getElementById("track2");
+const track_3 = document.getElementById("track3");
+const album_1 = document.getElementById("album1");
+const album_2 = document.getElementById("album2");
+const album_3 = document.getElementById("album3");
+const release_1 = document.getElementById("release1")
+const release_2 = document.getElementById("release2")
+const release_3 = document.getElementById("release3")
 
 function animateTitle(el) {
   let iterations = 0;
-
-  clearInterval(interval);
-
-  interval = setInterval(() => {
+  clearInterval(intervals.get(el));
+  const id = setInterval(() => {
     el.innerText = el.dataset.value
       .split("")
       .map((letter, index) => {
@@ -115,10 +121,14 @@ function animateTitle(el) {
       })
       .join("");
 
-    if (iterations >= el.dataset.value.length) clearInterval(interval);
+    if (iterations >= el.dataset.value.length) {
+      clearInterval(id);
+      intervals.delete(el);
+    }
 
     iterations += 1 / 3;
   }, 30);
+  intervals.set(el, id);
 }
 
 function artistUpdate(firstname) {
@@ -152,52 +162,175 @@ function artistUpdate(firstname) {
 
 const cardJuliette = document.getElementById("card-juliette");
 cardJuliette.addEventListener("click", () => {
-  title.setAttribute("data-value", "JULIETTE");
-  track.setAttribute("data-value", "LE TEMPS");
+  title.setAttribute("data-value", artists.juliette.name);
+  track.setAttribute("data-value", artists.juliette.track1);
+  track_2.setAttribute("data-value", artists.juliette.track2);
+  track_3.setAttribute("data-value", artists.juliette.track3);
+  album_1.setAttribute("data-value", artists.juliette.album1);
+  album_2.setAttribute("data-value", artists.juliette.album2);
+  album_3.setAttribute("data-value", artists.juliette.album3);
+  release_1.setAttribute("data-value", artists.juliette.release1);
+  release_2.setAttribute("data-value", artists.juliette.release2);
+  release_3.setAttribute("data-value", artists.juliette.release3);
   artistUpdate("juliette");
-  // const array = [title, track]
   animateTitle(title);
   animateTitle(track);
+  animateTitle(track_2);
+  animateTitle(track_3);
+  animateTitle(album_1);
+  animateTitle(album_2);
+  animateTitle(album_3);
+  animateTitle(release_1);
+  animateTitle(release_2);
+  animateTitle(release_3);
 });
 
 const cardThomas = document.getElementById("card-thomas");
 cardThomas.addEventListener("click", () => {
-  title.setAttribute("data-value", "THOMAS");
+  title.setAttribute("data-value", artists.thomas.name);
+  track.setAttribute("data-value", artists.thomas.track1);
+  track_2.setAttribute("data-value", artists.thomas.track2);
+  track_3.setAttribute("data-value", artists.thomas.track3);
+  album_1.setAttribute("data-value", artists.thomas.album1);
+  album_2.setAttribute("data-value", artists.thomas.album2);
+  album_3.setAttribute("data-value", artists.thomas.album3);
+  release_1.setAttribute("data-value", artists.thomas.release1);
+  release_2.setAttribute("data-value", artists.thomas.release2);
+  release_3.setAttribute("data-value", artists.thomas.release3);
   artistUpdate("thomas");
   animateTitle(title);
+  animateTitle(track);
+  animateTitle(track_2);
+  animateTitle(track_3);
+  animateTitle(album_1);
+  animateTitle(album_2);
+  animateTitle(album_3);
+  animateTitle(release_1);
+  animateTitle(release_2);
+  animateTitle(release_3);
 });
 
 const cardTeddy = document.getElementById("card-teddy");
 cardTeddy.addEventListener("click", () => {
   title.setAttribute("data-value", "TEDDY");
+  track.setAttribute("data-value", artists.teddy.track1);
+  track_2.setAttribute("data-value", artists.teddy.track2);
+  track_3.setAttribute("data-value", artists.teddy.track3);
+  album_1.setAttribute("data-value", artists.teddy.album1);
+  album_2.setAttribute("data-value", artists.teddy.album2);
+  album_3.setAttribute("data-value", artists.teddy.album3);
+  release_1.setAttribute("data-value", artists.teddy.release1);
+  release_2.setAttribute("data-value", artists.teddy.release2);
+  release_3.setAttribute("data-value", artists.teddy.release3);
   artistUpdate("teddy");
   animateTitle(title);
+  animateTitle(track);
+  animateTitle(track_2);
+  animateTitle(track_3);
+  animateTitle(album_1);
+  animateTitle(album_2);
+  animateTitle(album_3);
+  animateTitle(release_1);
+  animateTitle(release_2);
+  animateTitle(release_3);
 });
 
 const cardCecile = document.getElementById("card-cecile");
 cardCecile.addEventListener("click", () => {
   title.setAttribute("data-value", "CECILE");
+  track.setAttribute("data-value", artists.cecile.track1);
+  track_2.setAttribute("data-value", artists.cecile.track2);
+  track_3.setAttribute("data-value", artists.cecile.track3);
+  album_1.setAttribute("data-value", artists.cecile.album1);
+  album_2.setAttribute("data-value", artists.cecile.album2);
+  album_3.setAttribute("data-value", artists.cecile.album3);
+  release_1.setAttribute("data-value", artists.cecile.release1);
+  release_2.setAttribute("data-value", artists.cecile.release2);
+  release_3.setAttribute("data-value", artists.cecile.release3);
   artistUpdate("cecile");
   animateTitle(title);
+  animateTitle(track);
+  animateTitle(track_2);
+  animateTitle(track_3);
+  animateTitle(album_1);
+  animateTitle(album_2);
+  animateTitle(album_3);
+  animateTitle(release_1);
+  animateTitle(release_2);
+  animateTitle(release_3);
 });
 
 const cardRomain = document.getElementById("card-romain");
 cardRomain.addEventListener("click", () => {
   title.setAttribute("data-value", "ROMAIN");
+  track.setAttribute("data-value", artists.romain.track1);
+  track_2.setAttribute("data-value", artists.romain.track2);
+  track_3.setAttribute("data-value", artists.romain.track3);
+  album_1.setAttribute("data-value", artists.romain.album1);
+  album_2.setAttribute("data-value", artists.romain.album2);
+  album_3.setAttribute("data-value", artists.romain.album3);
+  release_1.setAttribute("data-value", artists.romain.release1);
+  release_2.setAttribute("data-value", artists.romain.release2);
+  release_3.setAttribute("data-value", artists.romain.release3);
   artistUpdate("romain");
   animateTitle(title);
+  animateTitle(track);
+  animateTitle(track_2);
+  animateTitle(track_3);
+  animateTitle(album_1);
+  animateTitle(album_2);
+  animateTitle(album_3);
+  animateTitle(release_1);
+  animateTitle(release_2);
+  animateTitle(release_3);
 });
 
 const cardMaxime = document.getElementById("card-maxime");
 cardMaxime.addEventListener("click", () => {
   title.setAttribute("data-value", "MAXIME");
+  track.setAttribute("data-value", artists.maxime.track1);
+  track_2.setAttribute("data-value", artists.maxime.track2);
+  track_3.setAttribute("data-value", artists.maxime.track3);
+  album_1.setAttribute("data-value", artists.maxime.album1);
+  album_2.setAttribute("data-value", artists.maxime.album2);
+  album_3.setAttribute("data-value", artists.maxime.album3);
+  release_1.setAttribute("data-value", artists.maxime.release1);
+  release_2.setAttribute("data-value", artists.maxime.release2);
+  release_3.setAttribute("data-value", artists.maxime.release3);
   artistUpdate("maxime");
   animateTitle(title);
+  animateTitle(track);
+  animateTitle(track_2);
+  animateTitle(track_3);
+  animateTitle(album_1);
+  animateTitle(album_2);
+  animateTitle(album_3);
+  animateTitle(release_1);
+  animateTitle(release_2);
+  animateTitle(release_3);
 });
 
 const cardJoel = document.getElementById("card-joel");
 cardJoel.addEventListener("click", () => {
   title.setAttribute("data-value", "JOEL");
+  track.setAttribute("data-value", artists.joel.track1);
+  track_2.setAttribute("data-value", artists.joel.track2);
+  track_3.setAttribute("data-value", artists.joel.track3);
+  album_1.setAttribute("data-value", artists.joel.album1);
+  album_2.setAttribute("data-value", artists.joel.album2);
+  album_3.setAttribute("data-value", artists.joel.album3);
+  release_1.setAttribute("data-value", artists.joel.release1);
+  release_2.setAttribute("data-value", artists.joel.release2);
+  release_3.setAttribute("data-value", artists.joel.release3);
   artistUpdate("joel");
   animateTitle(title);
+  animateTitle(track);
+  animateTitle(track_2);
+  animateTitle(track_3);
+  animateTitle(album_1);
+  animateTitle(album_2);
+  animateTitle(album_3);
+  animateTitle(release_1);
+  animateTitle(release_2);
+  animateTitle(release_3);
 });
