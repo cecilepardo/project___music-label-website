@@ -99,6 +99,28 @@ let interval = null;
 const title = document.querySelector("h1");
 const track = document.querySelector("h2");
 
+function animateTitle(el) {
+  let iterations = 0;
+
+  clearInterval(interval);
+
+  interval = setInterval(() => {
+    el.innerText = el.dataset.value
+      .split("")
+      .map((letter, index) => {
+        if (index < iterations) {
+          return el.dataset.value[index];
+        }
+        return letters[Math.floor(Math.random() * 26)];
+      })
+      .join("");
+
+    if (iterations >= el.dataset.value.length) clearInterval(interval);
+
+    iterations += 1 / 3;
+  }, 30);
+}
+
 function artistUpdate(firstname) {
   const artist = artists[firstname];
   const nameToUpdate = document.getElementById("artistName");
@@ -133,6 +155,7 @@ cardJuliette.addEventListener("click", () => {
   title.setAttribute("data-value", "JULIETTE");
   track.setAttribute("data-value", "LE TEMPS");
   artistUpdate("juliette");
+  // const array = [title, track]
   animateTitle(title);
   animateTitle(track);
 });
@@ -178,25 +201,3 @@ cardJoel.addEventListener("click", () => {
   artistUpdate("joel");
   animateTitle(title);
 });
-
-function animateTitle(el) {
-  let iterations = 0;
-
-  clearInterval(interval);
-
-  interval = setInterval(() => {
-    el.innerText = el.dataset.value
-      .split("")
-      .map((letter, index) => {
-        if (index < iterations) {
-          return el.dataset.value[index];
-        }
-        return letters[Math.floor(Math.random() * 26)];
-      })
-      .join("");
-
-    if (iterations >= el.dataset.value.length) clearInterval(interval);
-
-    iterations += 1 / 3;
-  }, 30);
-}
