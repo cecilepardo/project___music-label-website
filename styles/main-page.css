@@ -17,7 +17,7 @@
     fill: var(--offwhite);
     stroke-dasharray: 730;
     stroke-dashoffset: 730;
-    animation: draw 10s ease-in-out both infinite;
+    animation: drawHero 10s ease-in-out both infinite;
     filter: url(#shadow);
     transform: scale(1.5);
   }
@@ -55,7 +55,7 @@
 
 }
 
-@keyframes draw {
+@keyframes drawHero {
   30% {
     fill-opacity: 1;
     stroke-width: .1px;

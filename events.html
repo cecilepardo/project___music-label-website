@@ -11,7 +11,7 @@
         rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
     <title>Events</title>
-    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="styles/events.css">
 </head>
 
 <body>
@@ -1353,14 +1353,22 @@
     </svg>
     <!-- Navbar -->
     <nav>
-        <img src="assets/icons/placeholder.svg">
+        <img src="assets/icons/logo.png">
         <!-- Change ".underline" class according to the page we are on. -->
-        <a href="">Home</a>
-        <a href="">Artists</a>
-        <a href="">Discography</a>
-        <a class="underline" href="">Events</a>
-        <a href="">Shop</a>
-        <a href="">About</a>
+        <a href="index.html">Home</a>
+        <a href="artists.html">Artists</a>
+        <a href="discography.html">Discography</a>
+        <a class="underline" href="events.html">Events</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <svg class="cart" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
+            <g fill="none" stroke-width="1">
+                <path
+                    d="M3.555 14.257c-.718-3.353-1.078-5.03-.177-6.143C4.278 7 5.993 7 9.422 7h5.156c3.43 0 5.143 0 6.044 1.114c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076c-.825.667-1.987.667-4.311.667h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 11h18m-11 3h4m4-5l-3-6M6 9l3-6"
+                    opacity=".6" />
+            </g>
+        </svg>
     </nav>
     <section class="burgerNav">
         <svg id="burgerToggle" class="ham " viewBox="0 0 100 100" width="80">
@@ -1392,7 +1400,7 @@
 
     <div class="container">
         <div class="section featured">
-            <img src="Capture d’écran 2025-10-08 à 16.18.02.png" alt="Evenement à la une">
+            <img src="events/featured-event.png" alt="Evenement à la une">
             <div class="text">
                 <h2>Concert de Romain</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam cumque magni similique eligendi modi
@@ -1417,7 +1425,7 @@
             </div>
         </div>
         <div class="section">
-            <img src="Capture d’écran 2025-10-08 à 16.18.13.png" alt="Evenement 1">
+            <img src="events/event.png" alt="Evenement 1">
             <div class="text">
                 <h2>Concert de Cécile</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam cumque magni similique eligendi modi
@@ -1428,7 +1436,7 @@
             </div>
         </div>
         <div class="section">
-            <img src="image.png" alt="Evenement 2">
+            <img src="events/image.png" alt="Evenement 2">
             <div class="text">
                 <h2>Nouvel album de Thomas</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam cumque magni similique eligendi modi
@@ -1441,7 +1449,7 @@
 
 
         <div class="section">
-            <img src="image2.png" alt="Evenement 3">
+            <img src="events/image2.png" alt="Evenement 3">
             <div class="text">
                 <h2>Tournée national de Juliette</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam cumque magni similique
@@ -1453,7 +1461,7 @@
             </div>
         </div>
         <div class="section">
-            <img src="image.png" alt="Evenement 4">
+            <img src="events/image.png" alt="Evenement 4">
             <div class="text">
                 <h2>Dedicace de Teddy</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam cumque magni similique
@@ -1465,7 +1473,7 @@
             </div>
         </div>
         <div class="section">
-            <img src="image2.png" alt="Evenement 5">
+            <img src="events/image2.png" alt="Evenement 5">
             <div class="text">
                 <h2>Nouveau Single pour Joel</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam cumque magni similique
@@ -1477,10 +1485,11 @@
             </div>
         </div>
     </div>
-    <script src="events.js"></script>
+    <footer>
+        <p> 🎧 All rights preserved 🎧 </p>
+    </footer>
+    <script src="js/events.js"></script>
     <script src="js/main.js"></script>
-
-
 </body>
 
 </html>
