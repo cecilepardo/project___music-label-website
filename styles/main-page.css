@@ -97,3 +97,148 @@
     }
   }
 }
+
+.mainNews {
+  margin-top: 200px;
+
+  .newsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+
+    #newsText {
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+
+      h3 {
+        font-size: 32px;
+      }
+
+      h3,
+      a {
+        opacity: 0;
+      }
+    }
+
+    #newsImages {
+      width: 600px;
+      position: relative;
+      aspect-ratio: 1/1;
+
+      img {
+        position: absolute;
+        width: var(--imgSize);
+        left: -1000px;
+      }
+
+      #newsImg1 {
+        top: 300px;
+      }
+
+      #newsImg3 {
+        top: 150px;
+      }
+    }
+  }
+}
+
+.newsAnim {
+  img {
+    animation: imgNews .8s ease-in both;
+    animation-name: var(--animImg);
+  }
+
+  h3 {
+    animation: textNews .5s both .6s;
+    animation-timing-function: cubic-bezier(1, .14, .54, 1.61);
+  }
+
+  a {
+    animation: buttonNews .5s both 1s;
+    animation-timing-function: cubic-bezier(1, .14, .54, 1.61);
+  }
+}
+
+@keyframes img1 {
+  0% {
+    transform: rotate(50deg);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    filter: drop-shadow(0 0 50px rgba(255, 255, 255, 0.356));
+    left: 30px;
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes img2 {
+  0% {
+    transform: rotate(50deg);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    filter: drop-shadow(0 0 50px rgba(255, 255, 255, 0.356));
+    left: 30px;
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes img3 {
+  0% {
+    transform: rotate(50deg);
+    opacity: 0;
+
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    filter: drop-shadow(0 0 50px rgba(255, 255, 255, 0.356));
+    left: 230px;
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes textNews {
+
+  from {
+    transform: translateX(-800px);
+  }
+
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes buttonNews {
+
+  from {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
