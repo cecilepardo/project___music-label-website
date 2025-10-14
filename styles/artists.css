@@ -67,6 +67,10 @@ p {
   opacity: .8;
 }
 
+#profileimg{
+  filter: 
+          drop-shadow(0.2em -0.025em 0 rgba(255, 0, 208, 1));
+}
 
 @keyframes glitch {
   0% {

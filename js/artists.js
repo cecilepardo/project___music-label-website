@@ -125,21 +125,25 @@ function animateTitle(el) {
       clearInterval(id);
       intervals.delete(el);
     }
-    
     iterations += 1 / 3;
+
+    if (el.tagName == "H1") {
+      const span1 = document.createElement("span");
+      span1.ariaHidden = true ;
+      const span2 = document.createElement("span");
+      span2.ariaHidden = true ;
+      span1.innerText = el.innerText;
+      span2.innerText = el.innerText;
+      el.appendChild(span1);
+      el.appendChild(span2);
+    }
   }, 30);
-  setTimeout(() => {
-    el.innerHTML = `<span aria-hidden="true">${el.innerText}</span><span aria-hidden="true">${el.innerText}</span>${el.innerText}`;
-  },5000)
-  
+
   intervals.set(el, id);
 }
 
 function artistUpdate(firstname) {
   const artist = artists[firstname];
-  const nameToUpdate = document.getElementById("artistName");
-  // nameToUpdate.innerHTML = `<span aria-hidden="true">${artist.name}</span><span aria-hidden="true">${artist.name}</span>${artist.name}`;
-  nameToUpdate.innerHTML = artist.name;
   const track1ToUpdate = document.getElementById("track1");
   track1ToUpdate.innerHTML = artist.track1;
   const album1ToUpdate = document.getElementById("album1");
@@ -167,7 +171,7 @@ function artistUpdate(firstname) {
 
 const cardJuliette = document.getElementById("card-juliette");
 cardJuliette.addEventListener("click", () => {
-  // title.setAttribute("data-value", artists.juliette.name);
+  title.setAttribute("data-value", artists.juliette.name);
   track.setAttribute("data-value", artists.juliette.track1);
   track_2.setAttribute("data-value", artists.juliette.track2);
   track_3.setAttribute("data-value", artists.juliette.track3);
@@ -192,7 +196,7 @@ cardJuliette.addEventListener("click", () => {
 
 const cardThomas = document.getElementById("card-thomas");
 cardThomas.addEventListener("click", () => {
-  // title.setAttribute("data-value", artists.thomas.name);
+  title.setAttribute("data-value", artists.thomas.name);
   track.setAttribute("data-value", artists.thomas.track1);
   track_2.setAttribute("data-value", artists.thomas.track2);
   track_3.setAttribute("data-value", artists.thomas.track3);
@@ -339,7 +343,6 @@ cardJoel.addEventListener("click", () => {
   animateTitle(release_2);
   animateTitle(release_3);
 });
-
 
 // function animateTitle(el) {
 //   let iterations = 0;
