@@ -60,6 +60,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { threshold: 0.3 });
 
     sections.forEach(section => observer.observe(section));
+    // ---- Ajouter au calendrier ----
+    const calendarBtn = document.querySelector(".calendar-btn");
+    const timerElement = document.querySelector(".timer");
+
+    if (calendarBtn && timerElement) {
+        const eventTitle = document.querySelector(".featured h2").textContent.trim();
+        const eventDate = new Date(timerElement.dataset.date);
+
+        // Format pour Google Calendar : YYYYMMDDTHHmmssZ
+        const startDate = eventDate.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+        const endDate = new Date(eventDate.getTime() + 2 * 60 * 60 * 1000) // +2h
+            .toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+
+        const details = encodeURIComponent("Rejoignez-nous pour " + eventTitle + " !");
+        const location = encodeURIComponent("Zénith Nantes Métropole");
+        const gcalUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${startDate}/${endDate}&details=${details}&location=${location}`;
+
+        calendarBtn.href = gcalUrl;
+    }
+
 });
 
 

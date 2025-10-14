@@ -342,6 +342,21 @@ h3 {
     }
 }
 
+.calendar-container {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.calendar-btn {
+    display: inline-block;
+    /* les met sur la même ligne */
+    vertical-align: middle;
+    /* aligne verticalement */
+    margin-right: 1rem;
+    /* espace entre les boutons */
+}
+
+
 /* Application de l’animation à la section en vedette */
 .featured {
     animation: fadeInUp 1.2s ease-out both;
