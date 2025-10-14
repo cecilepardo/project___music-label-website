@@ -103,9 +103,9 @@ const track_3 = document.getElementById("track3");
 const album_1 = document.getElementById("album1");
 const album_2 = document.getElementById("album2");
 const album_3 = document.getElementById("album3");
-const release_1 = document.getElementById("release1")
-const release_2 = document.getElementById("release2")
-const release_3 = document.getElementById("release3")
+const release_1 = document.getElementById("release1");
+const release_2 = document.getElementById("release2");
+const release_3 = document.getElementById("release3");
 
 function animateTitle(el) {
   let iterations = 0;
@@ -125,15 +125,20 @@ function animateTitle(el) {
       clearInterval(id);
       intervals.delete(el);
     }
-
+    
     iterations += 1 / 3;
   }, 30);
+  setTimeout(() => {
+    el.innerHTML = `<span aria-hidden="true">${el.innerText}</span><span aria-hidden="true">${el.innerText}</span>${el.innerText}`;
+  },5000)
+  
   intervals.set(el, id);
 }
 
 function artistUpdate(firstname) {
   const artist = artists[firstname];
   const nameToUpdate = document.getElementById("artistName");
+  // nameToUpdate.innerHTML = `<span aria-hidden="true">${artist.name}</span><span aria-hidden="true">${artist.name}</span>${artist.name}`;
   nameToUpdate.innerHTML = artist.name;
   const track1ToUpdate = document.getElementById("track1");
   track1ToUpdate.innerHTML = artist.track1;
@@ -162,7 +167,7 @@ function artistUpdate(firstname) {
 
 const cardJuliette = document.getElementById("card-juliette");
 cardJuliette.addEventListener("click", () => {
-  title.setAttribute("data-value", artists.juliette.name);
+  // title.setAttribute("data-value", artists.juliette.name);
   track.setAttribute("data-value", artists.juliette.track1);
   track_2.setAttribute("data-value", artists.juliette.track2);
   track_3.setAttribute("data-value", artists.juliette.track3);
@@ -187,7 +192,7 @@ cardJuliette.addEventListener("click", () => {
 
 const cardThomas = document.getElementById("card-thomas");
 cardThomas.addEventListener("click", () => {
-  title.setAttribute("data-value", artists.thomas.name);
+  // title.setAttribute("data-value", artists.thomas.name);
   track.setAttribute("data-value", artists.thomas.track1);
   track_2.setAttribute("data-value", artists.thomas.track2);
   track_3.setAttribute("data-value", artists.thomas.track3);
@@ -334,3 +339,28 @@ cardJoel.addEventListener("click", () => {
   animateTitle(release_2);
   animateTitle(release_3);
 });
+
+
+// function animateTitle(el) {
+//   let iterations = 0;
+//   clearInterval(intervals.get(el));
+//   const id = setInterval(() => {
+//     el.innerText = el.dataset.value
+//       .split("")
+//       .map((letter, index) => {
+//         if (index < iterations) {
+//           return el.dataset.value[index];
+//         }
+//         return letters[Math.floor(Math.random() * 26)];
+//       })
+//       .join("");
+
+//     if (iterations >= el.dataset.value.length) {
+//       clearInterval(id);
+//       intervals.delete(el);
+//     }
+
+//     iterations += 1 / 3;
+//   }, 30);
+//   intervals.set(el, id);
+// }
