@@ -73,7 +73,7 @@ p {
   align-items: end;
   
   cursor: pointer; */
-   height: 42px;
+  height: 42px;
   width: 104px;
   border-radius: 40px;
   border: 3px;
@@ -89,8 +89,9 @@ p {
   transition: 0.3s ease-in-out;
   /* transform: translateY(-3px); */
   transform: scale(1.1);
-    box-shadow: 0 0 10px 4px #f63fff;
-    color: #f63fff}
+  box-shadow: 0 0 10px 4px #f63fff;
+  color: #f63fff
+}
 
 .card img {
   width: 15rem;
