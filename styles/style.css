@@ -114,7 +114,6 @@ h1 {
   to {
     width: 1000%;
     left: -500%;
-    opacity: 0;
   }
 }
 
@@ -171,10 +170,9 @@ h1 {
 .burgerNav {
   height: 7rem;
   margin: 1rem;
-
   .burgerMenu {
     width: 100%;
-    height: calc(100% - 8rem);
+    height:100%;
     position: absolute;
     z-index: 2;
     right: 100%;
@@ -188,7 +186,10 @@ h1 {
     backdrop-filter: blur(20px);
     transition: .3s ease;
   }
-
+  #burgerToggle{
+    position:fixed;
+    z-index:3;
+  }
   .openBurger {
     width: 100%;
     right: 0;
