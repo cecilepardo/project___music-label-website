@@ -8,6 +8,40 @@
     --font-body: "Montserrat", sans-serif;
 }
 
+/* Gradient qui se déplace doucement */
+@keyframes gradientNeonSmooth {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Pulse du halo synchronisé avec le gradient */
+@keyframes neonPulseUltimate {
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 20px #ffffff,
+            0 0 30px #f63fff,
+            0 0 40px #8400ff,
+            0 0 50px #f63fff,
+            0 0 60px #ffffff;
+    }
+
+    50% {
+        text-shadow:
+            0 0 30px #ffffff,
+            0 0 40px #f63fff,
+            0 0 50px #8400ff,
+            0 0 60px #f63fff,
+            0 0 70px #ffffff;
+    }
+}
+
 #backgroundTopo {
     width: 100%;
     z-index: -1;
@@ -250,8 +284,7 @@ div {
 }
 
 .section:nth-child(even):not(.featured).show {
-    transform: translateX(0);
-    translateY(0);
+    transform: translateX(0) translateY(0);
 }
 
 .section.show:hover {
@@ -331,9 +364,28 @@ div {
 h1,
 h2,
 h3 {
+    font-weight: bold;
+    font-family: var(--font-title);
+    font-size: inherit;
     color: white;
     position: relative;
-    text-shadow: 0 0 10px var(--pink), 0 0 20px var(--pink);
+
+    /* Gradient fluide */
+    background: linear-gradient(270deg, #ffffff 0%, #f63fff 40%, #8400ff 70%, #ffffff 100%);
+    background-size: 1200% 1200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Animations */
+    animation: gradientNeonSmooth 10s linear infinite, neonPulseUltimate 2s ease-in-out infinite alternate;
+
+    /* Glow puissant */
+    text-shadow:
+        0 0 20px #ffffff,
+        0 0 30px #f63fff,
+        0 0 40px #8400ff,
+        0 0 50px #f63fff,
+        0 0 60px #ffffff;
 }
 
 

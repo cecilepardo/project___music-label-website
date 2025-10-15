@@ -61,24 +61,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sections.forEach(section => observer.observe(section));
     // ---- Ajouter au calendrier ----
-    const calendarBtn = document.querySelector(".calendar-btn");
-    const timerElement = document.querySelector(".timer");
+    // ---- Ajouter au calendrier pour toutes les sections ----
+    const calendarBtns = document.querySelectorAll(".calendar-btn");
 
-    if (calendarBtn && timerElement) {
-        const eventTitle = document.querySelector(".featured h2").textContent.trim();
-        const eventDate = new Date(timerElement.dataset.date);
+    calendarBtns.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const dateStr = btn.dataset.date; // récupère la date du bouton
+            const eventDate = new Date(dateStr);
+            const eventTitle = btn.closest(".section").querySelector("h2").textContent.trim();
 
-        // Format pour Google Calendar : YYYYMMDDTHHmmssZ
-        const startDate = eventDate.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
-        const endDate = new Date(eventDate.getTime() + 2 * 60 * 60 * 1000) // +2h
-            .toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+            // Format Google Calendar : YYYYMMDDTHHmmssZ
+            const startDate = eventDate.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+            const endDate = new Date(eventDate.getTime() + 2 * 60 * 60 * 1000) // +2h
+                .toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
 
-        const details = encodeURIComponent("Rejoignez-nous pour " + eventTitle + " !");
-        const location = encodeURIComponent("Zénith Nantes Métropole");
-        const gcalUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${startDate}/${endDate}&details=${details}&location=${location}`;
+            const details = encodeURIComponent("Rejoignez-nous pour " + eventTitle + " !");
+            const location = encodeURIComponent("Zénith Nantes Métropole");
 
-        calendarBtn.href = gcalUrl;
-    }
+            const gcalUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${startDate}/${endDate}&details=${details}&location=${location}`;
+
+            window.open(gcalUrl, "_blank");
+        });
+    });
+
 
 });
 
