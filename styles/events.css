@@ -8,7 +8,6 @@
     --font-body: "Montserrat", sans-serif;
 }
 
-/* Gradient qui se déplace doucement */
 @keyframes gradientNeonSmooth {
     0% {
         background-position: 0% 50%;
@@ -19,7 +18,6 @@
     }
 }
 
-/* Pulse du halo synchronisé avec le gradient */
 @keyframes neonPulseUltimate {
 
     0%,
@@ -143,29 +141,34 @@ div {
 .map-container {
     width: 100%;
     margin: 1.5rem 0;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    border: 3px solid #ffffff;
-    box-shadow: 0 0 10px 2px #ffffff77;
-    transition: all 0.3s ease-in-out;
+    border: 3px solid #0f0f1a;
+    box-shadow: 0 0 30px 5px rgba(255, 0, 255, 0.6), 0 0 50px 15px rgba(0, 255, 255, 0.3);
+    transition: all 0.5s ease-in-out;
 }
 
 .map-container:hover {
-    box-shadow: 0 0 10px 4px #f63fff;
-    border-color: #f63fff;
+    box-shadow: 0 0 40px 10px #ff00ff, 0 0 60px 20px #00ffff;
+    border-color: #ff00ff;
 }
 
 .map-container iframe {
     width: 100%;
-    height: 250px;
+    height: 300px;
+    /* Hauteur responsive */
+    min-height: 300px;
     border: none;
     display: block;
-    filter: grayscale(100%) brightness(85%) contrast(110%);
-    transition: filter 0.3s ease;
+    /* Filtre sombre + néon cyberpunk */
+    filter: grayscale(100%) brightness(15%) contrast(150%) saturate(150%) hue-rotate(220deg);
+    transition: filter 0.5s ease, transform 0.5s ease;
+    transform: scale(1);
 }
 
 .map-container:hover iframe {
-    filter: grayscale(0%) brightness(100%) contrast(120%) saturate(130%);
+    filter: grayscale(0%) brightness(25%) contrast(160%) saturate(180%) hue-rotate(200deg);
+    transform: scale(1.02);
 }
 
 /* Compte à rebours */
@@ -228,7 +231,7 @@ div {
 }
 
 .flip-unit.flip span {
-    transform: rotateX(20deg);
+    transform: rotateX(90deg);
 }
 
 .flip-unit small {
@@ -370,16 +373,13 @@ h3 {
     color: white;
     position: relative;
 
-    /* Gradient fluide */
     background: linear-gradient(270deg, #ffffff 0%, #f63fff 40%, #8400ff 70%, #ffffff 100%);
     background-size: 1200% 1200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    /* Animations */
     animation: gradientNeonSmooth 10s linear infinite, neonPulseUltimate 2s ease-in-out infinite alternate;
 
-    /* Glow puissant */
     text-shadow:
         0 0 20px #ffffff,
         0 0 30px #f63fff,
@@ -411,6 +411,7 @@ h3 {
     display: inline-block;
     vertical-align: middle;
     margin-right: 1rem;
+    cursor: pointer;
 }
 
 .button-group {

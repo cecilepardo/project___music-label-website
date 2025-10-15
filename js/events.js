@@ -61,13 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sections.forEach(section => observer.observe(section));
     // ---- Ajouter au calendrier ----
-    // ---- Ajouter au calendrier pour toutes les sections ----
     const calendarBtns = document.querySelectorAll(".calendar-btn");
 
     calendarBtns.forEach(btn => {
         btn.addEventListener("click", (e) => {
             e.preventDefault();
-            const dateStr = btn.dataset.date; // récupère la date du bouton
+            const dateStr = btn.dataset.date;
             const eventDate = new Date(dateStr);
             const eventTitle = btn.closest(".section").querySelector("h2").textContent.trim();
 
