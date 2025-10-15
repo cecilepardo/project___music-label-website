@@ -1,4 +1,4 @@
-/* classes à contruire en css */
+
 * {
   margin: 0;
   padding: 0;
@@ -21,13 +21,16 @@ body {
  
 } */
 
-
+.title {
+  font-size: 42px;
+}
 
 #backgroundTopo {
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: -1;
-  position: fixed;
   fill: rgba(254, 2, 198, 0.1);
   stroke: rgba(254, 2, 198, 0.2);
   stroke-width: 0.5;
@@ -36,6 +39,7 @@ body {
   stroke-dasharray: 4000;
   stroke-dashoffset: 4000;
   animation: draw 6s ease-in-out infinite alternate;
+  transition: transform 0.1s ease-out;
 }
 
 @keyframes draw {
@@ -70,6 +74,24 @@ body {
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   border: 1px solid rgba(195, 195, 195, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.disk.init {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.disk.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.disk.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .disk:hover {
