@@ -82,4 +82,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+function initMap() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: 47.2287, lng: -1.6305 },
+        zoom: 15,
+        styles: [
+            { elementType: 'geometry', stylers: [{ color: '#130418' }] },
+            { elementType: 'labels.text.fill', stylers: [{ color: '#f63fff' }] },
+            { elementType: 'labels.text.stroke', stylers: [{ color: '#000000' }] },
+            { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#111111' }] },
+            { featureType: 'road', elementType: 'geometry', stylers: [{ color: '#4d245b' }] },
+            { featureType: 'poi', elementType: 'geometry', stylers: [{ color: '#1a0b2e' }] }
+        ]
+    });
+
+    // Marker néon
+    new google.maps.Marker({
+        position: { lat: 47.2287, lng: -1.6305 },
+        map,
+        title: "Zénith Nantes",
+        icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 10,
+            fillColor: '#f63fff',
+            fillOpacity: 1,
+            strokeWeight: 2,
+            strokeColor: '#ffffff'
+        }
+    });
+}
+
+
 

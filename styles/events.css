@@ -67,9 +67,9 @@ div {
     align-items: stretch;
     gap: 2rem;
     background: white;
-    border: 2px solid var(--pink-lighter);
+    border: none;
     border-radius: 15px;
-    box-shadow: 0 0 15px 2px var(--pink-lighter);
+    box-shadow: none;
     padding: 2.5rem;
     transform: scale(1.03);
 
@@ -355,6 +355,16 @@ h3 {
     margin-right: 1rem;
     /* espace entre les boutons */
 }
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    /* espace entre les boutons */
+    align-items: center;
+    /* aligne verticalement */
+}
+
+
 
 
 /* Application de l’animation à la section en vedette */
