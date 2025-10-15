@@ -174,8 +174,6 @@ div {
 }
 
 
-
-
 .flip-unit {
     position: relative;
     background: #111;
@@ -223,37 +221,47 @@ div {
 }
 
 
+
 /* Chaque section d’événement */
 .section {
     display: flex;
     align-items: center;
     gap: 2rem;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(195, 195, 195, 0.3);
     border-radius: 12px;
     padding: 1.5rem;
-    transition: transform 0.3s ease, background-color 0.3s ease;
     opacity: 0;
     transform: translateX(-150px) translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, background-color 0.3s ease;
+
 }
 
 .section.show {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0) translateY(0);
 }
 
 .section:nth-child(even):not(.featured) {
     transform: translateX(150px) translateY(20px);
-    /* départ depuis la droite */
 }
 
 .section:nth-child(even):not(.featured).show {
     transform: translateX(0);
+    translateY(0);
 }
 
-.section:hover {
-    transform: scale(1.02);
-    background-color: rgba(255, 255, 255, 0.08);
+.section.show:hover {
+    transform: translateX(0) translateY(0) scale(1.02);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.section:nth-child(even):not(.featured).show:hover {
+    transform: translateX(0) translateY(0) scale(1.02);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* Image à gauche */
@@ -349,19 +357,14 @@ h3 {
 
 .calendar-btn {
     display: inline-block;
-    /* les met sur la même ligne */
     vertical-align: middle;
-    /* aligne verticalement */
     margin-right: 1rem;
-    /* espace entre les boutons */
 }
 
 .button-group {
     display: flex;
     gap: 1rem;
-    /* espace entre les boutons */
     align-items: center;
-    /* aligne verticalement */
 }
 
 
