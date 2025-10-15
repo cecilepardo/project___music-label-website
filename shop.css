@@ -28,6 +28,11 @@ body {
 
 }
 
+.text-h1 {
+    text-align: center;
+    font-size: 4rem;
+}
+
 .shop {
     padding: 5rem 5rem;
 }
@@ -50,14 +55,14 @@ body {
     padding: 1.2rem;
     text-align: center;
     transition: transform 0.2s ease;
-    background-color: none;
+    background :rgba(0,0,0,0.3);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
     padding: 2rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     border: 1px solid rgba(195, 195, 195, 0.3);
