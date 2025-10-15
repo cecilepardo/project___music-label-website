@@ -1,3 +1,8 @@
+.scrollSnap {
+  height: 100%;
+  scroll-snap-align: start;
+}
+
 .hero {
   box-shadow: inset 200px 0px 100px var(--dark),
     inset -200px 0px 100px var(--dark),
@@ -98,53 +103,50 @@
   }
 }
 
-.mainNews {
-  margin-top: 200px;
+.newsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 
-  .newsContainer {
+  #newsText {
+    height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 200px;
+    justify-content: space-evenly;
 
-    #newsText {
-      height: 600px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-
-      h3 {
-        font-size: 32px;
-      }
-
-      h3,
-      a {
-        opacity: 0;
-      }
+    h3 {
+      font-size: 32px;
     }
 
-    #newsImages {
-      width: 600px;
-      position: relative;
-      aspect-ratio: 1/1;
+    h3,
+    a {
+      opacity: 0;
+    }
+  }
 
-      img {
-        position: absolute;
-        width: var(--imgSize);
-        left: -1000px;
-      }
+  #newsImages {
+    width: 600px;
+    position: relative;
+    aspect-ratio: 1/1;
 
-      #newsImg1 {
-        top: 300px;
-      }
+    img {
+      position: absolute;
+      width: var(--imgSize);
+      left: -1000px;
+    }
 
-      #newsImg3 {
-        top: 150px;
-      }
+    #newsDisk1 {
+      top: 300px;
+    }
+
+    #newsDisk3 {
+      top: 150px;
     }
   }
 }
+
 
 .newsAnim {
   img {
@@ -163,7 +165,7 @@
   }
 }
 
-@keyframes img1 {
+@keyframes disk1 {
   0% {
     transform: rotate(50deg);
     opacity: 0;
@@ -180,7 +182,7 @@
   }
 }
 
-@keyframes img2 {
+@keyframes disk2 {
   0% {
     transform: rotate(50deg);
     opacity: 0;
@@ -197,11 +199,10 @@
   }
 }
 
-@keyframes img3 {
+@keyframes disk3 {
   0% {
     transform: rotate(50deg);
     opacity: 0;
-
   }
 
   30% {
