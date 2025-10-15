@@ -1,3 +1,8 @@
+.scrollSnap {
+  height: 100%;
+  scroll-snap-align: start;
+}
+
 .hero {
   box-shadow: inset 200px 0px 100px var(--dark),
     inset -200px 0px 100px var(--dark),
@@ -95,5 +100,146 @@
       grid-area: 3/1/4/2;
       font-size: 24px;
     }
+  }
+}
+
+.newsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  #newsText {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    h3 {
+      font-size: 32px;
+    }
+
+    h3,
+    a {
+      opacity: 0;
+    }
+  }
+
+  #newsImages {
+    width: 600px;
+    position: relative;
+    aspect-ratio: 1/1;
+
+    img {
+      position: absolute;
+      width: var(--imgSize);
+      left: -1000px;
+    }
+
+    #newsDisk1 {
+      top: 300px;
+    }
+
+    #newsDisk3 {
+      top: 150px;
+    }
+  }
+}
+
+
+.newsAnim {
+  img {
+    animation: imgNews .8s ease-in both;
+    animation-name: var(--animImg);
+  }
+
+  h3 {
+    animation: textNews .5s both .6s;
+    animation-timing-function: cubic-bezier(1, .14, .54, 1.61);
+  }
+
+  a {
+    animation: buttonNews .5s both 1s;
+    animation-timing-function: cubic-bezier(1, .14, .54, 1.61);
+  }
+}
+
+@keyframes disk1 {
+  0% {
+    transform: rotate(50deg);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    filter: drop-shadow(0 0 50px rgba(255, 255, 255, 0.356));
+    left: 30px;
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes disk2 {
+  0% {
+    transform: rotate(50deg);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    filter: drop-shadow(0 0 50px rgba(255, 255, 255, 0.356));
+    left: 30px;
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes disk3 {
+  0% {
+    transform: rotate(50deg);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    filter: drop-shadow(0 0 50px rgba(255, 255, 255, 0.356));
+    left: 230px;
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes textNews {
+
+  from {
+    transform: translateX(-800px);
+  }
+
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes buttonNews {
+
+  from {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
