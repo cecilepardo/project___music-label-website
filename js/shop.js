@@ -28,3 +28,34 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('✅ Sélection:', clicked.textContent.trim());
   });
 });
+
+
+
+
+
+
+
+
+
+document.querySelectorAll('.slider').forEach(slider => {
+  const slides = slider.querySelectorAll('.slide');
+  const prev = slider.querySelector('.prev');
+  const next = slider.querySelector('.next');
+  let index = 0;
+
+  function showSlide(i) {
+    slides.forEach((slide, idx) => {
+      slide.classList.toggle('active', idx === i);
+    });
+  }
+
+  prev.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  });
+
+  next.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  });
+});
