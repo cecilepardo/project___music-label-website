@@ -1,4 +1,4 @@
-@import url('main-page.css');
+@import url("main-page.css");
 
 :root {
   --pink: #f63fff;
@@ -26,8 +26,6 @@ body {
 a {
   text-decoration: none;
 }
-
-
 
 /* NAV BAR */
 
@@ -76,7 +74,6 @@ nav {
       box-shadow: 0 0 5px 1px var(--pink-lighter);
       transition: 1s ease;
     }
-
   }
 
   .underline {
@@ -128,24 +125,21 @@ h1 {
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  transition: .3s ease;
-
+  transition: 0.3s ease;
 }
 
 .button:hover {
   box-shadow: 0 0 10px 4px #f63fff;
   color: #f63fff;
   transform: scale(1.1);
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
-@media(max-width:1300px) {
+@media (max-width: 1300px) {
   nav a {
     padding: 1.5rem 1rem;
   }
 }
-
-
 
 .ham {
   cursor: pointer;
@@ -154,13 +148,13 @@ h1 {
 
 /* Burger Menu  */
 
-@media(max-width:800px) {
+@media (max-width: 800px) {
   nav {
     display: none;
   }
 }
 
-@media(min-width:800px) {
+@media (min-width: 800px) {
   .burgerNav {
     display: none;
   }
@@ -184,13 +178,13 @@ h1 {
 
     font-size: 24px;
     backdrop-filter: blur(20px);
-    transition: .3s ease;
+    transition: 0.3s ease;
   }
 
   .openBurger {
     width: 100%;
     right: 0;
-    transition: .3s ease;
+    transition: 0.3s ease;
   }
 }
 
@@ -200,9 +194,8 @@ h1 {
   stroke: var(--offwhite);
   stroke-width: 2.5;
   stroke-linecap: round;
-  filter: url(#shadow)
+  filter: url(#shadow);
 }
-
 
 .ham {
   .top {
@@ -221,13 +214,10 @@ h1 {
 .open {
   .top {
     stroke-dashoffset: -132px;
-
-
   }
 
   .middle {
     stroke-dashoffset: -71px;
-
   }
 
   .bottom {
