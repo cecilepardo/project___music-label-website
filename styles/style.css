@@ -1,5 +1,4 @@
 @import url('main-page.css');
-@import url('artists.css');
 
 :root {
   --pink: #f63fff;
@@ -100,8 +99,7 @@ nav {
 h1 {
   text-align: center;
   color: #ffffff;
-  /* padding: 3rem; */
-
+  padding: 3rem;
 }
 
 .cart {
