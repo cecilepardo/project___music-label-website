@@ -1,0 +1,333 @@
+:root {
+    --pink: #f63fff;
+    --blue: #8400ff;
+    --purple: #4d245b;
+    --dark: #130418;
+    --text-light: #ffffff;
+    --font-title: "Zalando Sans Expanded", sans-serif;
+    --font-body: "Montserrat", sans-serif;
+}
+
+#backgroundTopo {
+    width: 100%;
+    z-index: -1;
+    position: fixed;
+    fill: rgba(254, 2, 198, 0.1);
+    stroke: rgba(254, 2, 198, 0.2);
+    stroke-width: 0.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 4000;
+    stroke-dashoffset: 4000;
+    animation: draw 6s ease-in-out infinite alternate;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+body {
+    background: var(--dark);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+button,
+h1,
+h2,
+h3 {
+    font-family: var(--title-font);
+}
+
+span,
+p,
+div {
+    font-family: var(--content-font)
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem;
+    align-items: center;
+}
+
+/* Section principale (mise en avant - grande affiche) */
+.featured {
+
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+    background: white;
+    border: 2px solid var(--pink-lighter);
+    border-radius: 15px;
+    box-shadow: 0 0 15px 2px var(--pink-lighter);
+    padding: 2.5rem;
+    transform: scale(1.03);
+
+
+}
+
+.featured img {
+    flex: 3;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    animation: fadeIn 1.5s ease-out both;
+}
+
+.featured .text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 1rem;
+}
+
+.featured h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.featured p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #eaeaea;
+    margin-bottom: 1.5rem;
+}
+
+/* Carte Google Maps */
+.map-container {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 10px 2px #ffffff77;
+    transition: all 0.3s ease-in-out;
+}
+
+.map-container:hover {
+    box-shadow: 0 0 10px 4px #f63fff;
+    border-color: #f63fff;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+    display: block;
+    filter: grayscale(100%) brightness(85%) contrast(110%);
+    transition: filter 0.3s ease;
+}
+
+.map-container:hover iframe {
+    filter: grayscale(0%) brightness(100%) contrast(120%) saturate(130%);
+}
+
+/* Compte à rebours */
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    border: 3px;
+    background: none;
+    color: #ffffff;
+    box-shadow: 0 0 10px 2px #ffffff77;
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.25s ease-in-out;
+}
+
+.timer-flash {
+    box-shadow: 0 0 15px 5px #f63fff;
+    border-color: #f63fff;
+    color: #f63fff;
+}
+
+.timer span {
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+    transition: color 0.2s ease;
+}
+
+.timer .digit-flash {
+    animation: digitGlow 0.4s ease;
+}
+
+
+
+.flip-unit {
+    position: relative;
+    background: #111;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    min-width: 3.8rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+.flip-unit span {
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.flip-unit.flip span {
+    transform: rotateX(20deg);
+}
+
+.flip-unit small {
+    position: absolute;
+    bottom: -1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: var(--pink);
+}
+
+.featured .btn-ticket {
+    align-self: start;
+    font-size: 1.1rem;
+    padding: 0.9rem 2rem;
+}
+
+.section {
+    width: 80%;
+}
+
+.featured {
+    width: 95%;
+}
+
+
+/* Chaque section d’événement */
+.section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.section:hover {
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Image à gauche */
+.section img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Zone de texte à droite */
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.text .button {
+    display: inline-block;
+    width: auto;
+    border: 3px;
+    padding: 0.7rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 80px;
+    background: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px 2px #ffffff77;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.text p {
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+}
+
+/* Bouton billetterie / shop */
+.button {
+    all: unset;
+    display: inline-block;
+    width: auto;
+    padding: 0.7rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    border: 3px;
+    border-color: #ffffff;
+    box-shadow: 0 0 10px 2px #ffffff77;
+    border-radius: 80px;
+    background: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px 4px #f63fff;
+    color: #f63fff
+}
+
+/* Titres avec effet néon */
+h1,
+h2,
+h3 {
+    color: white;
+    position: relative;
+    text-shadow: 0 0 10px var(--pink), 0 0 20px var(--pink);
+}
+
+
+/* Animation d’apparition de la section principale */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Application de l’animation à la section en vedette */
+.featured {
+    animation: fadeInUp 1.2s ease-out both;
+}
+
+.my-thing {
+    background-color: var(--blue);
+    border: 1px solid var(--pink);
+}

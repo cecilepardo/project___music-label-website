@@ -19,4 +19,4 @@ const startAnimations = () => {
   });
 }
 
-startAnimations(); 
+startAnimations();
