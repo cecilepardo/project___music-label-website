@@ -1,4 +1,5 @@
 @import url('main-page.css');
+@import url('artists.css');
 
 :root {
   --pink: #f63fff;
@@ -39,6 +40,10 @@ nav {
   padding: 1.5rem;
   position: relative;
   overflow-x: hidden;
+
+  img {
+    width: 4rem;
+  }
 
   a {
     color: var(--offwhite);
@@ -90,6 +95,12 @@ nav {
       animation: activeNav reverse 1s;
     }
   }
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  padding: 3rem;
 
 }
 
@@ -103,31 +114,32 @@ nav {
   to {
     width: 1000%;
     left: -500%;
-    opacity: 0;
   }
 }
 
 .button {
-height: 42px;
-width: 104px;
-border-radius: 40px;
-border: 3px;
-border-color: 40px;
-box-shadow: 0 0 10px 2px #ffffff77;
-background: none;
-color: #ffffff;
-justify-content: center;
-gap: 10px;
-flex-wrap: wrap;
-transition: .3s ease;
+  height: 42px;
+  width: 104px;
+  border-radius: 40px;
+  border: 3px;
+  border-color: 40px;
+  box-shadow: 0 0 10px 2px #ffffff77;
+  background: none;
+  color: #ffffff;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  transition: .3s ease;
 
 }
 
 .button:hover {
   box-shadow: 0 0 10px 4px #f63fff;
   color: #f63fff;
-  transform: scale(1.1); transition: .3s ease;
+  transform: scale(1.1);
+  transition: .3s ease;
 }
+
 @media(max-width:1300px) {
   nav a {
     padding: 1.5rem 1rem;
@@ -158,10 +170,9 @@ transition: .3s ease;
 .burgerNav {
   height: 7rem;
   margin: 1rem;
-
   .burgerMenu {
     width: 100%;
-    height: calc(100% - 8rem);
+    height:100%;
     position: absolute;
     z-index: 2;
     right: 100%;
@@ -175,7 +186,10 @@ transition: .3s ease;
     backdrop-filter: blur(20px);
     transition: .3s ease;
   }
-
+  #burgerToggle{
+    position:fixed;
+    z-index:3;
+  }
   .openBurger {
     width: 100%;
     right: 0;
@@ -222,4 +236,17 @@ transition: .3s ease;
   .bottom {
     stroke-dashoffset: -132px;
   }
+}
+
+/*--Footer--*/
+
+footer {
+  margin-top: 3rem;
+  background-color: #130418;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  padding: 20px;
+  border: 0.5px solid #363234;
+  border-radius: 20px;
 }

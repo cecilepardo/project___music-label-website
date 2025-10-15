@@ -1,0 +1,102 @@
+/* classes à contruire en css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Zalando Sans Expanded", sans-serif;
+
+}
+
+body {
+  background-color: #130418;
+}
+
+/* .header {
+  display: flex;
+  justify-content: space-around;
+  align-items: left;
+  
+  flex-wrap: wrap;
+  background: none;
+ 
+} */
+
+
+
+#backgroundTopo {
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  position: fixed;
+  fill: rgba(254, 2, 198, 0.1);
+  stroke: rgba(254, 2, 198, 0.2);
+  stroke-width: 0.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: draw 6s ease-in-out infinite alternate;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+
+
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.disk {
+
+  margin-top: 1rem;
+  background-color: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  height: 600px;
+  width: 300px;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(195, 195, 195, 0.3);
+}
+
+.disk:hover {
+  transform: scale(1.02);
+  transition: .3s ease;
+
+}
+
+.disk-cover {
+  width: 250px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.disk-title {
+  justify-content: center;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+.disk-description {
+  justify-content: center;
+  font-family: 'Montserrat';
+  font-size: small;
+  color: #130418;
+
+  color: #ffffff;
+}
