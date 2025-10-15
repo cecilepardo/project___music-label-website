@@ -21,7 +21,7 @@ const startAnimations = () => {
 
 startAnimations();
 
-const obsFade = new IntersectionObserver((entries) => {
+const scrollObs = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("newsAnim");
@@ -30,6 +30,6 @@ const obsFade = new IntersectionObserver((entries) => {
 }, {
   threshold: 0.7
 });
-const fadeElement = document.querySelectorAll(".newsContainer");
+const scrollAnim = document.querySelectorAll(".newsAllContainer");
 
-fadeElement.forEach((el) => obsFade.observe(el));
+scrollAnim.forEach((el) => scrollObs.observe(el));

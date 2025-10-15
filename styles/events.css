@@ -20,7 +20,6 @@
     stroke-dasharray: 4000;
     stroke-dashoffset: 4000;
     animation: draw 6s ease-in-out infinite alternate;
-    top: 0;
 }
 
 @keyframes draw {
