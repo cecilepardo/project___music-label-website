@@ -19,4 +19,17 @@ const startAnimations = () => {
   });
 }
 
-startAnimations(); 
+startAnimations();
+
+const obsFade = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("newsAnim");
+    }
+  });
+}, {
+  threshold: 0.7
+});
+const fadeElement = document.querySelectorAll(".newsContainer");
+
+fadeElement.forEach((el) => obsFade.observe(el));
