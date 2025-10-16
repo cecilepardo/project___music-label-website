@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="styles/style.css" />
-  <link rel="stylesheet" href="styles/about.css">
-  <title>About</title>
-</head>
+    <link href="styles/about.css" rel="stylesheet"/>
+    <title>About</title>
+  </head>
 
-<body>
-  <svg id="backgroundTopo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-    <path class='draw' d='M600 325.1v-1.17c-6.5 3.83-13.06 7.64-14.68
+  <body>
+    <svg
+      id="backgroundTopo"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 600 600"
+    >
+      <path
+        class="draw"
+        d="M600 325.1v-1.17c-6.5 3.83-13.06 7.64-14.68
       8.64-10.6 6.56-18.57 12.56-24.68 19.09-5.58 5.95-12.44 10.06-22.42
       14.15-1.45.6-2.96 1.2-4.83 1.9l-4.75 1.82c-9.78 3.75-14.8 6.27-18.98
       10.1-4.23 3.88-9.65 6.6-16.77 8.84-1.95.6-3.99 1.17-6.47 1.8l-6.14
@@ -1349,16 +1355,19 @@
       1.5 3.47 1.91 4.9 2.07 9.96.07 22.72-9.56 5.02-3.79 11.15-7 19.1-10.28
       3.76-1.55 17.3-6.6 20-7.72 9.5-3.97 13.14-7.2
       11.73-11.44-.9-2.71-2.25-3.8-4.3-3.79-1.6 0-2.15.17-7.36 2.05-8.17
-      2.94-13.34 3.14-19.16-1.01z'></path>
-  </svg>
-  <nav>
+      2.94-13.34 3.14-19.16-1.01z"
+      ></path>
+    </svg>
+    <nav>
+    <div class="navDesktop">
     <img src="./assets/icons/logo.png">
-    <a href="index.html">Home</a>
+    <!-- Change ".underline" class according to the page we are on. -->
+    <a class="underline" href="index.html">Home</a>
     <a href="artists.html">Artists</a>
     <a href="discography.html">Discography</a>
     <a href="events.html">Events</a>
     <a href="shop.html">Shop</a>
-    <a class="underline" href="about.html">About</a>
+    <a href="about.html">About</a>
     <svg class="cart" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
       <g fill="none" stroke-width="1">
         <path
@@ -1366,16 +1375,17 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M3 11h18m-11 3h4m4-5l-3-6M6 9l3-6" opacity=".6" />
       </g>
     </svg>
-  </nav>
-  <section class="burgerNav">
-    <svg id="burgerToggle" class="ham " viewBox="0 0 100 100" width="80">
-      <path class="line top"
-        d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
-      <path class="line middle"
-        d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272" />
-      <path class="line bottom"
-        d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
-    </svg>
+    </div>
+    <div class="burgerNav">
+      <svg id="burgerToggle" class="ham " viewBox="0 0 100 100" width="80">
+        <path class="line top"
+          d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
+        <path class="line middle"
+          d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272" />
+        <path class="line bottom"
+          d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
+      </svg>
+      </div>
     <div class="burgerMenu">
       <a href="index.html">Home</a>
       <a href="artists.html">Artists</a>
@@ -1391,138 +1401,157 @@
         </g>
       </svg>
     </div>
-  </section>
-    <main>
-        <section class="sectionabout about">
-<h2>About</h2>
-<div class="text-container">
-<p class="short-text">
-  At Neon 808 we are 
-<br>Raw. Relentless. Real.
-<br><br>
-</p>
-808 was born from a light in the night,
-the glow of streets, screens, and studios where ideas pulse louder than sleep.
-Founded by independent minds driven by sound and freedom, 
-the label draws its energy from the warmth of the neon
-and the raw heartbeat of the 808,
-the legendary drum that shaped generations of creators.
-Here, there are no formats, no boundaries. 
-Only artists exploring landscapes with honesty.
-Each track is a spark in the dark, 
-a signal to those who dream, create, and refuse 
-to follow the world’s noise.
-<br><br>
-<span class="hidden-text">
-808 grew into a community, a movement of producers,
-and visionaries who turn silence into rhythm and rhythm
-into emotion. From smoky basements to digital realms,
-its sound travels like an echo of rebellion and unity.
-Every release tells a story of nights spent chasing inspiration
-and mornings touched by the afterglow of creation.
-It’s more than a label; it’s a heartbeat shared by all who believe
-that music isn’t made to fit in — it’s made to break free.
-<br><br>
-<br>Name: Neon 808
-<br>Created in: 2012
-<br>Headquater: Rotterdam, Pays-Bas
-<br>Fondators: Wilders
-</span>
-<br>
-<br>
-<button class="read-more-button" onclick="showMoreLess()">Read more</button>
-</div>
-<br>
-        </section>
-        <section class="sectionabout contact">
-            <h2> Contact us </h2>
-            <p> with this form or by e-mail at: neon808@neon808.com</p>
-            <form id="contactForm">
-                <label for="name"> Name </label>
-                <input type="text" id="name" name="name" placeholder="Name" required>
-                <label for="surname"> Surname </label>
-                <input type="text" id="surname" name="surname" placeholder="Surname" required>
-                <label for="email"> E-mail </label>
-                <input type="email" id="email" name="email" placeholder="Your e-mail" required>
-                <label for="message"> Your message </label>
-                <textarea id="message" name="message" placeholder="Your message..." required></textarea>
-				<a href="#" id="submitBtn">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Send
-                </a>
-			</form>
-      </div>
-				</section>
-        <section class="sectionabout socialIcons">
-<h3> Follow us for more </h3>
-<div>
-	<img src="/images/facebook (1).png" alt="Facebook" class="social" />
-	<img src="/images/instagram.png" alt="instagram" class="social" />
-	<img src="/images/tic-tac.png" alt="tiktok" class="social" />
-	<img src="/images/youtube.png" alt="youtube" class="social" />
-</div>
-</section>
-        <div class="popup-overlay" id="popupOverlay">
-          <div class="popup-content">
-            <h3> 💟 Thank you for your message 💟 </h3>
-            <button class="popup-close" id="closePopup">OK
-           </button>
-          </div>
-        </div>
-                <div class= "talk">
-<h2> They talk about us !</h2>
-</div>
-        <div class="quotes-container">
-            <div class="quote-box">
-            <p class="quote"> "Neon 808 isn't just a label.
-                <br>They've proven you can stay trueto your visionan sill grow." 
-                <br> <strong>Amelie Lens. DJ/Producer</strong>
-            </p>
-            </div>
-            <div class="quote-box">
-                <p class="quote">
-                    "What Neon808 built is rare: 
-                    <br> a family that makes uncompromising music."
-                    <br> <strong>Richie Hawtin</strong>
-                </p>
-            </div>
-            <div class="quote-box">
-                <p class="quote">
-                    "Neon 808 represents evrything I love music:
-                    <br>raw, honest, community driven." <strong>Ben klock</strong>
-                </p>
-            </div>
-            <div class="quote-box">
-                <p class="quote">
-                  “I plugged my heart into their basslines. 
-                  <br>Now I breathe in BPM.”
-                  <br><strong>Rina Vox, android singer</strong>
-                </p>
-            </div>
-            <div class="quote-box">
-                <p class="quote">
-                  “Neon 808 doesn’t follow trends. It programs them.”
-                  <br><strong>Yuri Tan, journalist for FutureSound Weekly</strong>
-                </p>
-            </div>
-            <div class="quote-box">
-                <p class="quote">
-                  “When you hear Neon 808, 
-                  <br>you know you’re not alone in the night.”
-                  <br><strong>Mina K, rebellious K-pop idol</strong>
-                </p>
-            </div>
-        </div>
-    </div>
-    </main>
-		<footer>
-            <p> 🎧 All rights preserved 🎧 </p>
-		</footer>
-        <script src="js/main.js"></script>
-        <script src="./about.js"></script>
-</body>
 
+  </nav>
+    <main>
+      <section class="sectionabout about">
+        <h2>About</h2>
+        <div class="text-container">
+          <p class="short-text">
+            At Neon 808 we are
+            <br />Raw. Relentless. Real. <br /><br />
+          </p>
+          808 was born from a light in the night, the glow of streets, screens,
+          and studios where ideas pulse louder than sleep. Founded by
+          independent minds driven by sound and freedom, the label draws its
+          energy from the warmth of the neon and the raw heartbeat of the 808,
+          the legendary drum that shaped generations of creators. Here, there
+          are no formats, no boundaries. Only artists exploring landscapes with
+          honesty. Each track is a spark in the dark, a signal to those who
+          dream, create, and refuse to follow the world’s noise.
+          <br /><br />
+          <span class="hidden-text">
+            808 grew into a community, a movement of producers, and visionaries
+            who turn silence into rhythm and rhythm into emotion. From smoky
+            basements to digital realms, its sound travels like an echo of
+            rebellion and unity. Every release tells a story of nights spent
+            chasing inspiration and mornings touched by the afterglow of
+            creation. It’s more than a label; it’s a heartbeat shared by all who
+            believe that music isn’t made to fit in — it’s made to break free.
+            <br /><br />
+            <br />Name: Neon 808 <br />Created in: 2012 <br />Headquater:
+            Rotterdam, Pays-Bas <br />Fondators: Wilders
+          </span>
+          <br />
+          <br />
+          <button class="read-more-button" onclick="showMoreLess()">
+            Read more
+          </button>
+        </div>
+        <br />
+      </section>
+      <section class="sectionabout contact">
+        <h2>Contact us</h2>
+        <p>with this form or by e-mail at: neon808@neon808.com</p>
+        <form id="contactForm">
+          <label for="name"> Name </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            required
+          />
+          <label for="surname"> Surname </label>
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            placeholder="Surname"
+            required
+          />
+          <label for="email"> E-mail </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your e-mail"
+            required
+          />
+          <label for="message"> Your message </label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your message..."
+            required
+          ></textarea>
+          <button class="btnTrack" href="#" id="submitBtn">
+            <!-- <span></span>
+            <span></span>
+            <span></span>
+            <span></span> -->
+            Send
+          </button>
+        </form>
+      </section>
+      <section class="sectionabout socialIcons">
+        <h3>Follow us for more</h3>
+        <div>
+          <img src="/images/facebook (1).png" alt="Facebook" class="social" />
+          <img src="/images/instagram.png" alt="instagram" class="social" />
+          <img src="/images/tic-tac.png" alt="tiktok" class="social" />
+          <img src="/images/youtube.png" alt="youtube" class="social" />
+        </div>
+      </section>
+      <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+          <h3>💟 Thank you for your message 💟</h3>
+          <button class="popup-close" id="closePopup">OK</button>
+        </div>
+      </div>
+      <div class="talk">
+        <h2>They talk about us !</h2>
+      </div>
+      <div class="quotes-container">
+        <div class="quote-box">
+          <p class="quote">
+            "Neon 808 isn't just a label. <br />They've proven you can stay
+            trueto your visionan sill grow." <br />
+            <strong>Amelie Lens. DJ/Producer</strong>
+          </p>
+        </div>
+        <div class="quote-box">
+          <p class="quote">
+            "What Neon808 built is rare:
+            <br />
+            a family that makes uncompromising music." <br />
+            <strong>Richie Hawtin</strong>
+          </p>
+        </div>
+        <div class="quote-box">
+          <p class="quote">
+            "Neon 808 represents evrything I love music:
+            <br />raw, honest, community driven." <strong>Ben klock</strong>
+          </p>
+        </div>
+        <div class="quote-box">
+          <p class="quote">
+            “I plugged my heart into their basslines.
+            <br />Now I breathe in BPM.” <br /><strong
+              >Rina Vox, android singer</strong
+            >
+          </p>
+        </div>
+        <div class="quote-box">
+          <p class="quote">
+            “Neon 808 doesn’t follow trends. It programs them.”
+            <br /><strong>Yuri Tan, journalist for FutureSound Weekly</strong>
+          </p>
+        </div>
+        <div class="quote-box">
+          <p class="quote">
+            “When you hear Neon 808,
+            <br />you know you’re not alone in the night.” <br /><strong
+              >Mina K, rebellious K-pop idol</strong
+            >
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>🎧 All rights preserved 🎧</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="./about.js"></script>
+  </body>
 </html>

@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Zalando Sans Expanded", sans-serif;
-
 }
 
 body {
@@ -21,97 +20,14 @@ body {
  
 } */
 
-.title {
-  font-size: 42px;
-}
-.bateau {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem;
-
-}
-/* EFFET GLITCH DEBUT */
-
 .glitch-title {
-  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
-    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-
-  animation: glitch-title 500ms infinite;
-  position: relative;
+  font-size: 3rem;
 }
-
-.glitch-title span {
-  position: absolute;
-  /* top: -50;
-  left: 50%;  */
-  top: 0;
-  left: 0;
-}
-
-.glitch-title span:first-child {
-  animation: glitch-title 650ms infinite;
-  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-  transform: translate(-0.025em, -0.0125em);
-  color: white;
-  opacity: 0.8;
-}
-
-.glitch-title span:last-child {
-  animation: glitch-title 375ms infinite;
-  clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
-  transform: translate(0.0125em, 0.025em);
-  color: white;
-  opacity: 0.8;
-}
-
-
-
-@keyframes glitch-title {
-  0% {
-    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
-      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-  14.99% {
-    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
-      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-  15% {
-    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
-      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
-      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-  49.99% {
-    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
-      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
-      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-  50% {
-    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
-      -0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-  99.99% {
-    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
-      -0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-  100% {
-    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
-      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
-      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-}
-
-/* EFFET GLITCH FIN */
 
 #backgroundTopo {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: -1;
+  position: fixed;
   fill: rgba(254, 2, 198, 0.1);
   stroke: rgba(254, 2, 198, 0.2);
   stroke-width: 0.5;
@@ -120,15 +36,12 @@ body {
   stroke-dasharray: 4000;
   stroke-dashoffset: 4000;
   animation: draw 6s ease-in-out infinite alternate;
-  transition: transform 0.1s ease-out;
 }
 
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
   }
-
-
 }
 
 .card-container {
@@ -139,7 +52,6 @@ body {
 }
 
 .disk {
-
   margin-top: 1rem;
   position: relative;
   overflow: hidden;
@@ -168,7 +80,11 @@ body {
   left: var(--mouse-x);
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 60%);
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.1),
+    transparent 60%
+  );
   transform: translate(-50%, -50%);
   pointer-events: none;
   transition: top 0.1s, left 0.1s;
@@ -191,7 +107,7 @@ body {
 
 .disk:hover {
   transform: scale(1.02);
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .disk-cover {
@@ -209,7 +125,7 @@ body {
 
 .disk-title {
   justify-content: center;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: bold;
   color: #ffffff;
   padding: 1rem;
@@ -217,19 +133,31 @@ body {
 
 .disk-description {
   justify-content: center;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: small;
   color: #130418;
 
   color: #ffffff;
 }
 @keyframes glitch {
-  0% { transform: translate(0); }
-  20% { transform: translate(-1px, 1px); }
-  40% { transform: translate(1px, -1px); }
-  60% { transform: translate(-1px, 1px); }
-  80% { transform: translate(1px, -1px); }
-  100% { transform: translate(0); }
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    transform: translate(1px, -1px);
+  }
+  60% {
+    transform: translate(-1px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
 .glitch {
   animation: glitch 0.3s ease-in-out 2;
@@ -238,5 +166,3 @@ body {
 .disk:hover .disk-cover {
   animation: glitch 0.3s ease-in-out 2;
 }
-
-
