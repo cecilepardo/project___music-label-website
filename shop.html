@@ -27,32 +27,78 @@
       />
     </svg>
     <nav>
-      <img src="./assets/icons/logo.png" />
-      <a href="index.html">Home</a>
-      <a href="artists.html">Artists</a>
-      <a href="discography.html">Discography</a>
-      <a href="events.html">Events</a>
-      <a class="underline" href="shop.html">Shop</a>
-      <a href="about.html">About</a>
-      <svg
-        class="cart"
-        xmlns="http://www.w3.org/2000/svg"
-        width="200"
-        height="200"
-        viewBox="0 0 24 24"
-      >
-        <g fill="none" stroke-width="1">
+      <div class="navDesktop">
+        <img src="./assets/icons/logo.png" />
+        <!-- Change ".underline" class according to the page we are on. -->
+        <a class="underline" href="index.html">Home</a>
+        <a href="artists.html">Artists</a>
+        <a href="discography.html">Discography</a>
+        <a href="events.html">Events</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <svg
+          class="cart"
+          xmlns="http://www.w3.org/2000/svg"
+          width="200"
+          height="200"
+          viewBox="0 0 24 24"
+        >
+          <g fill="none" stroke-width="1">
+            <path
+              d="M3.555 14.257c-.718-3.353-1.078-5.03-.177-6.143C4.278 7 5.993 7 9.422 7h5.156c3.43 0 5.143 0 6.044 1.114c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076c-.825.667-1.987.667-4.311.667h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2Z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 11h18m-11 3h4m4-5l-3-6M6 9l3-6"
+              opacity=".6"
+            />
+          </g>
+        </svg>
+      </div>
+      <div class="burgerNav">
+        <svg id="burgerToggle" class="ham" viewBox="0 0 100 100" width="80">
           <path
-            d="M3.555 14.257c-.718-3.353-1.078-5.03-.177-6.143C4.278 7 5.993 7 9.422 7h5.156c3.43 0 5.143 0 6.044 1.114c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076c-.825.667-1.987.667-4.311.667h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2Z"
+            class="line top"
+            d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272"
           />
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3 11h18m-11 3h4m4-5l-3-6M6 9l3-6"
-            opacity=".6"
+            class="line middle"
+            d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272"
           />
-        </g>
-      </svg>
+          <path
+            class="line bottom"
+            d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272"
+          />
+        </svg>
+      </div>
+      <div class="burgerMenu">
+        <a href="index.html">Home</a>
+        <a href="artists.html">Artists</a>
+        <a href="discography.html">Discography</a>
+        <a href="events.html">Events</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <svg
+          class="cart"
+          xmlns="http://www.w3.org/2000/svg"
+          width="200"
+          height="200"
+          viewBox="0 0 24 24"
+        >
+          <g fill="none" stroke-width="1">
+            <path
+              d="M3.555 14.257c-.718-3.353-1.078-5.03-.177-6.143C4.278 7 5.993 7 9.422 7h5.156c3.43 0 5.143 0 6.044 1.114c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076c-.825.667-1.987.667-4.311.667h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2Z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 11h18m-11 3h4m4-5l-3-6M6 9l3-6"
+              opacity=".6"
+            />
+          </g>
+        </svg>
+      </div>
     </nav>
 
     <h1 class="title">Shop</h1>
@@ -105,8 +151,15 @@
         <div class="ProductsCard slider-card">
           <div class="slider">
             <img
-              src="./images/Merch-img/sweater-face.png"class="slide active"alt="sweater-face"/>
-            <img src="./images/Merch-img/sweater-back.png" class="slide" alt="sweater-back"/>
+              src="./images/Merch-img/sweater-face.png"
+              class="slide active"
+              alt="sweater-face"
+            />
+            <img
+              src="./images/Merch-img/sweater-back.png"
+              class="slide"
+              alt="sweater-back"
+            />
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
           </div>
@@ -121,8 +174,16 @@
 
         <div class="ProductsCard slider-card">
           <div class="slider">
-            <img src="./images/Merch-img/t-shirt-2-face.png" class="slide active" alt="t-shirt face 2"/>
-            <img src="./images/Merch-img/t-shirt-2-dos.png" class="slide" alt="t-shirt-2-back"/>
+            <img
+              src="./images/Merch-img/t-shirt-2-face.png"
+              class="slide active"
+              alt="t-shirt face 2"
+            />
+            <img
+              src="./images/Merch-img/t-shirt-2-dos.png"
+              class="slide"
+              alt="t-shirt-2-back"
+            />
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
           </div>
@@ -138,8 +199,16 @@
 
         <div class="ProductsCard slider-card">
           <div class="slider">
-            <img src="./images/Merch-img/cargo-face.png" class="slide active" alt="cargo-face"/>
-            <img src="./images/Merch-img/cargo-back.png" class="slide" alt="cargo-back"/>
+            <img
+              src="./images/Merch-img/cargo-face.png"
+              class="slide active"
+              alt="cargo-face"
+            />
+            <img
+              src="./images/Merch-img/cargo-back.png"
+              class="slide"
+              alt="cargo-back"
+            />
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
           </div>
@@ -155,8 +224,12 @@
 
         <div class="ProductsCard slider-card">
           <div class="slider">
-            <img src="./images/Merch-img/cap-face.png" class="slide active" alt="cap-face"/>
-            <img src="./images/Merch-img/cap.png" class="slide" alt="aside"/>
+            <img
+              src="./images/Merch-img/cap-face.png"
+              class="slide active"
+              alt="cap-face"
+            />
+            <img src="./images/Merch-img/cap.png" class="slide" alt="aside" />
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
           </div>
@@ -172,8 +245,16 @@
 
         <div class="ProductsCard slider-card">
           <div class="slider">
-            <img src="./images/Merch-img/pull-blanc-face.png" class="slide active" alt="pull-face"/>
-            <img src="./images/Merch-img/pull-blanc-dos.png" class="slide" alt="pull-back"/>
+            <img
+              src="./images/Merch-img/pull-blanc-face.png"
+              class="slide active"
+              alt="pull-face"
+            />
+            <img
+              src="./images/Merch-img/pull-blanc-dos.png"
+              class="slide"
+              alt="pull-back"
+            />
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
           </div>
@@ -189,8 +270,16 @@
 
         <div class="ProductsCard slider-card">
           <div class="slider">
-            <img src="./images/Merch-img/totbag-face.png" class="slide active" alt="totebag-face"/>
-            <img src="./images/Merch-img/totbag-back.png" class="slide" alt="totebag-back"/>
+            <img
+              src="./images/Merch-img/totbag-face.png"
+              class="slide active"
+              alt="totebag-face"
+            />
+            <img
+              src="./images/Merch-img/totbag-back.png"
+              class="slide"
+              alt="totebag-back"
+            />
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
           </div>
@@ -206,8 +295,16 @@
         </div>
         <div class="ProductsCard slider-card">
           <div class="slider">
-            <img src="./images/Merch-img/cargo-face.png" class="slide active" alt="cargo-face"/>
-            <img src="./images/Merch-img/cargo-back.png" class="slide" alt="cargo-back"/>
+            <img
+              src="./images/Merch-img/cargo-face.png"
+              class="slide active"
+              alt="cargo-face"
+            />
+            <img
+              src="./images/Merch-img/cargo-back.png"
+              class="slide"
+              alt="cargo-back"
+            />
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
           </div>
@@ -220,10 +317,14 @@
           </div>
           <button class="button">Add</button>
         </div>
-        
+
         <div class="ProductsCard slider-card">
           <div class="slider">
-            <img src="./images/Merch-img/tableau-face.png" class="slide active" alt="tableau"/>
+            <img
+              src="./images/Merch-img/tableau-face.png"
+              class="slide active"
+              alt="tableau"
+            />
           </div>
 
           <p class="Description">Painting 808</p>

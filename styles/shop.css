@@ -18,10 +18,7 @@ body {
     animation: draw 6s ease-in-out infinite alternate;
 }
 
-.Logo {
-
-}
-
+/* h1 shop */
 .title {
     font-size: 42px;
 }
@@ -36,6 +33,7 @@ body {
     border-color: #f63fff;
 }
 
+/* Début des cartes merch */
 .Products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -82,6 +80,7 @@ width: 100%;
     pointer-events: none;
 }
 
+/* Fin des cartes merch */
 
 .Description {
     margin: 2rem 0;
@@ -193,3 +192,28 @@ z-index: 2;
 .next { right: 10px; }
 
 .prev:hover, .next:hover { background: rgba(246,63,255,0.8); }
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(19, 4, 24, 0.6);
+  color: #fff;
+  border: 1px solid #ffffff77;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+}
+
+.prev { left: 30px; }
+.next { right: 30px; }
+
+.prev:hover, .next:hover {
+  background-color: #130418;
+  border: 2px solid #fff;
+  box-shadow: 0 0 6px 4px rgba(255, 255, 255, 0.45);
+  transform: translateY(-50%) scale(1.12);
+}
