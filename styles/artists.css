@@ -44,6 +44,9 @@ p {
   position: relative;
 }
 
+
+/* EFFET GLITCH DEBUT */
+
 .glitch span {
   position: absolute;
   /* top: -50;
@@ -51,7 +54,7 @@ p {
   top: 0;
   left: 0;
 }
-/* Position a corriger jsp pq ca se superpose pas naturellement */
+
 
 .glitch span:first-child {
   animation: glitch 650ms infinite;
@@ -72,6 +75,8 @@ p {
 #profileimg {
   filter: drop-shadow(0em 0em 3em #a63dbe8d);
 }
+
+
 
 @keyframes glitch {
   0% {
@@ -109,6 +114,9 @@ p {
   }
 }
 
+/* EFFET GLITCH FIN */
+
+
 .container {
   display: grid;
   grid-template-columns: 60% 40%;
@@ -126,13 +134,13 @@ p {
 .boxLeft {
   display: flex;
   flex-direction: column;
-  padding: 18rem 0 0 5rem;
+  padding: 12rem 0 0 5rem;
   align-items: baseline;
 }
 
 .artistPicture {
-  width: 55rem;
-  transform: translateX(-130px);
+  width: 50rem;
+  transform: translate(-130px, -70px);
 }
 
 .highlightedTracks {
@@ -142,7 +150,7 @@ p {
   margin-top: 5rem;
   padding-left: 1rem;
 }
-
+/* BOUTON */
 :root {
   --clr-neon: #ffffff;
   --clr-bg: #2b2127;
@@ -206,11 +214,15 @@ p {
   opacity: 1;
 }
 
+/* BOUTON */
+
 .card img {
   width: 15rem;
   border-radius: 25px;
   cursor: pointer;
   transition: transform 0.5s ease;
+  box-shadow: 0 0 1em 0.1em var(--clr-neon);
+
 }
 
 .card img:hover {
@@ -223,7 +235,9 @@ p {
   flex-direction: row;
   gap: 2rem;
   justify-content: center;
-  transform: translateY(-500px);
+  /* transform: translateY(-500px); */
+  position: absolute;
+  bottom: -25%;
 }
 
 #backgroundTopo {

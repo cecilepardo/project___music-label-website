@@ -21,8 +21,8 @@ body {
   overflow-x: hidden;
   margin-top: 7rem;
   height: 100%;
-  scroll-snap-type: y mandatory;
-  scrollbar-width: none;
+  /* scroll-snap-type: y mandatory;
+  scrollbar-width: none; */
 }
 
 @media (max-width:800px) {
@@ -58,6 +58,8 @@ a {
   position: relative;
   overflow-x: hidden;
   position: fixed;
+  width: 100%;
+  z-index: 10;
   top: 0;
 
   img {
