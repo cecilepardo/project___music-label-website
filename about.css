@@ -288,7 +288,7 @@ a span:nth-child(3) {
 
 /*--Social--*/
 .socialIcons {
-  width: 1500px;
+  width: 600px;
   height: auto;
   text-align: center;
   justify-content: center;
@@ -307,6 +307,7 @@ a span:nth-child(3) {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 1500px;
 }
 .talk h2{
   padding: 2px;
