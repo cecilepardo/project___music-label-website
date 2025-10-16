@@ -1354,6 +1354,7 @@
 
   <!-- LOGO + NAVBAR -->
   <nav>
+    <div class="navDesktop">
     <img src="./assets/icons/logo.png">
     <!-- Change ".underline" class according to the page we are on. -->
     <a href="index.html">Home</a>
@@ -1369,16 +1370,17 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M3 11h18m-11 3h4m4-5l-3-6M6 9l3-6" opacity=".6" />
       </g>
     </svg>
-  </nav>
-  <section class="burgerNav">
-    <svg id="burgerToggle" class="ham " viewBox="0 0 100 100" width="80">
-      <path class="line top"
-        d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
-      <path class="line middle"
-        d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272" />
-      <path class="line bottom"
-        d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
-    </svg>
+    </div>
+    <div class="burgerNav">
+      <svg id="burgerToggle" class="ham " viewBox="0 0 100 100" width="80">
+        <path class="line top"
+          d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
+        <path class="line middle"
+          d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272" />
+        <path class="line bottom"
+          d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
+      </svg>
+      </div>
     <div class="burgerMenu">
       <a href="index.html">Home</a>
       <a href="artists.html">Artists</a>
@@ -1394,128 +1396,130 @@
         </g>
       </svg>
     </div>
-  </section>
+
+  </nav>
   <!-- FIN LOGO + NAVBAR -->
 
   <!-- PAGE TITLE -->
-  <h1 class="title">Discography</h1>
-  <!-- END PAGE TITLE -->
+  <div class = "bateau"><h1 class="glitch-title"><span aria-hidden="true">Discography</span><span aria-hidden="true">Discography</span>Discography</h1>
+  </div><!-- END PAGE TITLE -->
 
   <!-- CARDS CONTAINER -->
   <section class="card-container">
     <!-- DISK CARDS -->
-    <div class="disk">
+     
+    <div class="disk init">
       <img class="disk-cover" src="images/discography-images/disk1.jpg"
-        alt="man walking in a rainy futuristic city with neon lights and geometrical shapes floating in the air" />
-      <h2 class="disk-title">Luna | Nyx</h2>
-      <div class="disk-description">"Luna Obscura" est une traversée hypnotique entre ténèbres organiques et pulsations
+        alt="Two persons walking in a rainy futuristic city with neon lights" />
+      <h2 class="disk-title">Fractal Patterns | Nexø</h2>
+      <div class="disk-description">"Fractal Patterns" est une traversée hypnotique entre ténèbres organiques et pulsations
         stellaires, où la techno devient rituel, guidée par la présence spectrale d’une prêtresse oubliée au cœur de la
         forêt. </div>
       <button class="button">Discover</button>
     </div>
-    <div class="disk">
+    <div class="disk init">
       <img class="disk-cover" src="images/discography-images/disk2.jpg"
-        alt="woman walking in a rainy futuristic city with neon lights and geometrical shapes floating in the air" />
-      <h2 class="disk-title">Luna | Nyx</h2>
-      <div class="disk-description">"Falling" explore la chute intérieure comme un passage initiatique : une descente
+        alt="Perspective view of a person with an umbrella on a balcony in a futuristic city with neon lights" />
+      <h2 class="disk-title">No gods only noise | D3ltaØnn4</h2>
+      <div class="disk-description">"No gods only noise" explore la chute intérieure comme un passage initiatique : une descente
         lente et abyssale, portée par des textures industrielles et des nappes éthérées, entre vertige et renaissance.
       </div>
       <button class="button">Discover</button>
     </div>
-    <div class="disk">
+    <div class="disk init">
       <img class="disk-cover" src="images/discography-images/disk3.jpg"
-        alt="woman woman in a long reddress lying on the ground seeing from the top of a staircase" />
-      <h2 class="disk-title">Luna | Nyx</h2>
-      <div class="disk-description">"Treelights" est une ode lumineuse à la forêt vivante — un dialogue entre machines
+        alt="futuristic city with neon lights" />
+      <h2 class="disk-title">Le nord se souvient | Joel</h2>
+      <div class="disk-description">"Le nord se souvient" est une ode lumineuse à la forêt vivante — un dialogue entre machines
         et racines, où chaque battement résonne comme un éclat de lumière filtrant à travers la canopée nocturne.
       </div>
       <button class="button">Discover</button>
     </div>
     </div>
-    <div class="disk">
+    <div class="disk init">
       <img class="disk-cover" src="images/discography-images/disk4.jpg"
-        alt="woman woman in a long reddress lying on the ground seeing from the top of a staircase" />
-      <h2 class="disk-title">Luna | Nyx</h2>
-      <div class="disk-description">"Treelights" est une ode lumineuse à la forêt vivante — un dialogue entre machines
+        alt="City at night with neon reflections on the wet ground" />
+      <h2 class="disk-title">Liminal Decay | D3ltaØnn4</h2>
+      <div class="disk-description">"Liminal Decay" est une ode lumineuse à la forêt vivante — un dialogue entre machines
         et racines, où chaque battement résonne comme un éclat de lumière filtrant à travers la canopée nocturne.
       </div>
       <button class="button">Discover</button>
     </div>
     </div>
-    <div class="disk">
+    <div class="disk init">
       <img class="disk-cover" src="images/discography-images/disk5.jpg"
-        alt="woman woman in a long reddress lying on the ground seeing from the top of a staircase" />
-      <h2 class="disk-title">Luna | Nyx</h2>
-      <div class="disk-description">"Treelights" est une ode lumineuse à la forêt vivante — un dialogue entre machines
+        alt="robots walking in a futuristic city with neons reflecting on the wet ground" />
+      <h2 class="disk-title">Synthetic Horizons | Nexø</h2>
+      <div class="disk-description">"Synthetic Horizons" est une ode lumineuse à la forêt vivante — un dialogue entre machines
         et racines, où chaque battement résonne comme un éclat de lumière filtrant à travers la canopée nocturne.
       </div>
       <button class="button">Discover</button>
     </div>
     </div>
-    <div class="disk">
+    <div class="disk init">
       <img class="disk-cover" src="images/discography-images/disk6.jpg"
-        alt="woman woman in a long reddress lying on the ground seeing from the top of a staircase" />
-      <h2 class="disk-title">Luna | Nyx</h2>
-      <div class="disk-description">"Treelights" est une ode lumineuse à la forêt vivante — un dialogue entre machines
+        alt="yellow tramway in a futuristic city with neons reflecting on the wet ground" />
+      <h2 class="disk-title">Aruarian Dance | Teddy>></h2>
+      <div class="disk-description">"Aruarian Dance" est une ode lumineuse à la forêt vivante — un dialogue entre machines
         et racines, où chaque battement résonne comme un éclat de lumière filtrant à travers la canopée nocturne.
       </div>
       <button class="button">Discover</button>
     </div>
     </div>
-    <div class="disk">
+    <div class="disk init">
       <img class="disk-cover" src="images/discography-images/disk7.jpg"
-        alt="woman woman in a long reddress lying on the ground seeing from the top of a staircase" />
-      <h2 class="disk-title">Luna | Nyx</h2>
-      <div class="disk-description">"Treelights" est une ode lumineuse à la forêt vivante — un dialogue entre machines
+        alt="people walking in a futuristic city with neons reflecting on the wet ground" />
+      <h2 class="disk-title">Void Transmissions | Nexø</h2>
+      <div class="disk-description">"Void Transmissions" est une ode lumineuse à la forêt vivante — un dialogue entre machines
         et racines, où chaque battement résonne comme un éclat de lumière filtrant à travers la canopée nocturne.
       </div>
       <button class="button">Discover</button>
     </div>
     </div>
-    <div class="disk">
+    <div class="disk init">
       <img class="disk-cover" src="images/discography-images/disk8.jpg"
-        alt="woman woman in a long reddress lying on the ground seeing from the top of a staircase" />
-      <h2 class="disk-title">Luna | Nyx</h2>
+        alt="decayed gazstation in a dark futuristic city with many screens reflecting on the wet floor" />
+      <h2 class="disk-title">Zero Signal Society | D3ltaØnn4</h2>
       <div class="disk-description">"Treelights" est une ode lumineuse à la forêt vivante — un dialogue entre machines
         et racines, où chaque battement résonne comme un éclat de lumière filtrant à travers la canopée nocturne.
       </div>
       <button class="button">Discover</button>
     </div>
-    <div class="disk">
+    <div class="disk init">
       <img class="disk-cover" src="images/discography-images/disk9.jpg"
-        alt="woman woman in a long reddress lying on the ground seeing from the top of a staircase" />
-      <h2 class="disk-title">Luna | Nyx</h2>
-      <div class="disk-description">"Treelights" est une ode lumineuse à la forêt vivante — un dialogue entre machines
+        alt="dark futuristic city with many screens reflecting on the wet floor" />
+      <h2 class="disk-title">Love Sick | Maxime</h2>
+      <div class="disk-description">"Love Sick" est une ode lumineuse à la forêt vivante — un dialogue entre machines
         et racines, où chaque battement résonne comme un éclat de lumière filtrant à travers la canopée nocturne.
       </div>
       <button class="button">Discover</button>
     </div>
     </div>
-    <div class="disk">
+    <div class="disk init">
       <img class="disk-cover" src="images/discography-images/disk10.jpg"
-        alt="woman woman in a long reddress lying on the ground seeing from the top of a staircase" />
-      <h2 class="disk-title">Luna | Nyx</h2>
-      <div class="disk-description">"Treelights" est une ode lumineuse à la forêt vivante — un dialogue entre machines
+        alt="man in a hoodie in a dark futuristic city with many geometrical neon shapes reflecting on the wet floor" />
+      <h2 class="disk-title">Brother Stone | Maxime</h2>
+      <div class="disk-description">"Brother Stone" est une ode lumineuse à la forêt vivante — un dialogue entre machines
         et racines, où chaque battement résonne comme un éclat de lumière filtrant à travers la canopée nocturne.
       </div>
       <button class="button">Discover</button>
     </div>
     </div>
-    <div class="disk">
+    <div class="disk init">
       <img class="disk-cover" src="images/discography-images/disk11.jpg"
-        alt="woman woman in a long reddress lying on the ground seeing from the top of a staircase" />
-      <h2 class="disk-title">Luna | Nyx</h2>
-      <div class="disk-description">"Treelights" est une ode lumineuse à la forêt vivante — un dialogue entre machines
+        alt="cars in a dark futuristic city with many screens reflecting on the wet floor" />
+      <h2 class="disk-title">Les Vestiges du Fléau | Joel</h2>
+      <div class="disk-description">"Les Vestiges du Fléau" est une ode lumineuse à la forêt vivante — un dialogue entre machines
         et racines, où chaque battement résonne comme un éclat de lumière filtrant à travers la canopée nocturne.
       </div>
       <button class="button">Discover</button>
     </div>
     </div>
-    <div class="disk">
+    <div class="disk init">
       <img class="disk-cover" src="images/discography-images/disk12.jpg"
-        alt="woman woman in a long reddress lying on the ground seeing from the top of a staircase" />
-      <h2 class="disk-title">Luna | Nyx</h2>
-      <div class="disk-description">"Treelights" est une ode lumineuse à la forêt vivante — un dialogue entre machines
+        alt="dark futuristic city with many neon signs reflecting on the wet floor" />
+      <h2 class="disk-title">Mac & Devin | Thomas</h2>
+      <div class="disk-description">"Mac & Devin" est une ode lumineuse à la forêt vivante — un dialogue entre machines
         et racines, où chaque battement résonne comme un éclat de lumière filtrant à travers la canopée nocturne.
       </div>
       <button class="button">Discover</button>
