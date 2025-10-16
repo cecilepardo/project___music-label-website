@@ -10,6 +10,8 @@
   --offwhite: #dcd7df;
   --title-font: "Zalando Sans Expanded", sans-serif;
   --content-font: "Montserrat", sans-serif;
+  --bouncy-function: cubic-bezier(1, .14, .54, 1.61);
+
 }
 
 html {
@@ -24,6 +26,7 @@ body {
   height: 100%;
   scroll-snap-type: y mandatory;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 @media (max-width:800px) {
