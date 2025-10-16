@@ -1396,11 +1396,13 @@
     <main>
         <section class="sectionabout about">
 <h2>About</h2>
-<p>At Neon 808 we are 
+<div class="text-container">
+<p class="short-text">
+  At Neon 808 we are 
 <br>Raw. Relentless. Real.
-<br>
-<br>
-Néon 808 was born from a light in the night,
+</p>
+<span class="hidden-text">
+808 was born from a light in the night,
 the glow of streets, screens, and studios where ideas pulse louder than sleep.
 Founded by independent minds driven by sound and freedom, 
 the label draws its energy from the warmth of the neon
@@ -1411,14 +1413,17 @@ Only artists exploring landscapes with honesty.
 Each track is a spark in the dark, 
 a signal to those who dream, create, and refuse 
 to follow the world’s noise.
-		<br>
-        <br>
-        <br>
-	Name: Neon 808
+<br><br>
+<br>Name: Neon 808
 <br>Created in: 2012
 <br>Headquater: Rotterdam, Pays-Bas
 <br>Fondators: Wilders
-</p>
+</span>
+<br>
+<br>
+<button class="read-more-button" onclick="test()">Read more</button>
+</div>
+<br>
 <h3> Follow us for more </h3>
 <div>
 	<img src="/images/facebook (1).png" alt="Facebook" class="social" />
@@ -1430,16 +1435,16 @@ to follow the world’s noise.
         <section class="sectionabout contact">
             <h2> Contact us </h2>
             <p> with this form or by e-mail at: neon808@neon808.com</p>
-            <form>
+            <form id="contactForm">
                 <label for="name"> Name </label>
-                <input type="name" id="name" name="name" placeholder="Name" required>
+                <input type="text" id="name" name="name" placeholder="Name" required>
                 <label for="surname"> Surname </label>
-                <input typer="surname" id="surname" name="surname" placeholder="Surname" required>
+                <input type="text" id="surname" name="surname" placeholder="Surname" required>
                 <label for="email"> E-mail </label>
                 <input type="email" id="email" name="email" placeholder="Your e-mail" required>
                 <label for="message"> Your message </label>
-                <textarea type="message" id="message" name="message" placeholder="Your message..." required></textarea>
-				<a href="#">
+                <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+				<a href="#" id="submitBtn">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -1447,7 +1452,15 @@ to follow the world’s noise.
                 Send
                 </a>
 			</form>
+      </div>
 				</section>
+        <div class="popup-overlay" id="popupOverlay">
+          <div class="popup-content">
+            <h3> 💟 Thank you for your message 💟 </h3>
+            <button class="popup-close" id="closePopup">OK
+           </button>
+          </div>
+        </div>
                 <div class= "talk">
 <h2> They talk about us !</h2>
 </div>
@@ -1455,20 +1468,40 @@ to follow the world’s noise.
             <div class="quote-box">
             <p class="quote"> "Neon 808 isn't just a label.
                 <br>They've proven you can stay trueto your visionan sill grow." 
-                <br> Amelie Lens. DJ/Producer 
+                <br> <strong>Amelie Lens. DJ/Producer</strong>
             </p>
             </div>
             <div class="quote-box">
                 <p class="quote">
-                    "what Neon808 built is rare: 
+                    "What Neon808 built is rare: 
                     <br> a family that makes uncompromising music."
-                    <br> Richie Hawtin. 
+                    <br> <strong>Richie Hawtin</strong>
                 </p>
             </div>
             <div class="quote-box">
                 <p class="quote">
                     "Neon 808 represents evrything I love music:
-                    <br>raw, honest, community driven." Ben klock.
+                    <br>raw, honest, community driven." <strong>Ben klock</strong>
+                </p>
+            </div>
+            <div class="quote-box">
+                <p class="quote">
+                  “I plugged my heart into their basslines. 
+                  <br>Now I breathe in BPM.”
+                  <br><strong>Rina Vox, android singer</strong>
+                </p>
+            </div>
+            <div class="quote-box">
+                <p class="quote">
+                  “Neon 808 doesn’t follow trends. It programs them.”
+                  <br><strong>Yuri Tan, journalist for FutureSound Weekly</strong>
+                </p>
+            </div>
+            <div class="quote-box">
+                <p class="quote">
+                  “When you hear Neon 808, 
+                  <br>you know you’re not alone in the night.”
+                  <br><strong>Mina K, rebellious K-pop idol</strong>
                 </p>
             </div>
         </div>
@@ -1478,5 +1511,6 @@ to follow the world’s noise.
             <p> 🎧 All rights preserved 🎧 </p>
 		</footer>
         <script src="js/main.js"></script>
+        <script src="./about.js"></script>
 </body>
 </html>

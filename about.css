@@ -46,6 +46,8 @@ main {
 }
 
 .sectionabout{
+    height: 750px;
+    width: 500px;
     background-color:#130418;
     text-align: center;
     font-size: x-large;
@@ -55,7 +57,7 @@ main {
     padding: 20px;
     background: rgba(0, 0, 0, 0.1);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px #363234;
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(195, 195, 195, 0.3);
@@ -70,7 +72,6 @@ main {
 }
 .sectionabout p{
     font-size: medium;
-    margin-bottom: 5rem;
 }
 
 /*--About--*/
@@ -79,7 +80,37 @@ main {
     margin: 20px;
     max-width: 40%;
 }
-
+.hidden-text {
+  display: none;
+  font-size: medium;
+}
+.read-more-button {
+  font-weight: bold;
+  color: #f6f4f5;
+  background: #363234;
+  width: 150px;
+  height: 30px;
+  border: 1px solid #363234;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+}
+.read-more-button::before{
+  content:'';
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #750f87;
+  border-radius: 90% 90% 0 0;
+  transition: all .5s;
+  z-index: -1;
+}
+.read-more-button:hover::before{
+  top: 0;
+  border-radius: 0;
+}
 .social {
     width: 3rem;
     margin: 1rem;
@@ -193,6 +224,71 @@ a span:nth-child(3) {
     }
   }
 
+  .popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #363234;
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid #4d245b;
+    box-shadow: 0 0 30px rgba(134, 65, 224, 0.816);
+    text-align: center;
+    animation: slideIn 0.4s ease;
+    min-width: 300px;
+  }
+  
+  .popup-content h3 {
+    color:#8400ff;
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  .popup-close {
+    background: #363234;
+    color: #8400ff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  } 
+
+  .popup-close:hover {
+    background: #363234;
+    box-shadow: 0 0 15px #4d245b;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, - 60%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
 /*--Quotes--*/
 
 .talk {
@@ -215,17 +311,18 @@ a span:nth-child(3) {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    
 }
 .quote-box {
     width: fit-content;
     background-color: #130418;
     border-radius: 10px;
     padding: 25px;
-    box-shadow: 0 0 10px var(--pink);
+    box-shadow: 0 0 10px #363234;
     margin-bottom: 10px;
     background: rgba(0, 0, 0, 0.1);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(195, 195, 195, 0.3);
@@ -240,6 +337,15 @@ a span:nth-child(3) {
 }
 .quote-box:nth-child(3) {
   animation-delay: 1s;
+}
+.quote-box:nth-child(4) {
+  animation-delay: 1.5s;
+}
+.quote-box:nth-child(5) {
+  animation-delay: 2s;
+}
+.quote-box:nth-child(6) {
+  animation-delay: 2.5s;
 }
 @keyframes float{
   0%, 100% {
