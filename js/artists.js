@@ -94,30 +94,91 @@ const artists = {
   },
 };
 
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const intervals = new WeakMap();
+const title = document.querySelector("h1");
+const track = document.querySelector("h2");
+const track_2 = document.getElementById("track2");
+const track_3 = document.getElementById("track3");
+const album_1 = document.getElementById("album1");
+const album_2 = document.getElementById("album2");
+const album_3 = document.getElementById("album3");
+const release_1 = document.getElementById("release1");
+const release_2 = document.getElementById("release2");
+const release_3 = document.getElementById("release3");
+
+const elements = [
+  title,
+  track,
+  track_2,
+  track_3,
+  album_1,
+  album_2,
+  album_3,
+  release_1,
+  release_2,
+  release_3,
+];
+
+function animateTitle(el) {
+  let iterations = 0;
+  clearInterval(intervals.get(el));
+  const id = setInterval(() => {
+    el.innerText = el.dataset.value
+      .split("")
+      .map((letter, index) => {
+        if (index < iterations) {
+          return el.dataset.value[index];
+        }
+        return letters[Math.floor(Math.random() * 26)];
+      })
+      .join("");
+
+    if (iterations >= el.dataset.value.length) {
+      clearInterval(id);
+      intervals.delete(el);
+    }
+    iterations += 1 / 3;
+
+    if (el.tagName == "H1") {
+      const span1 = document.createElement("span");
+      span1.ariaHidden = true ;
+      const span2 = document.createElement("span");
+      span2.ariaHidden = true ;
+      span1.innerText = el.innerText;
+      span2.innerText = el.innerText;
+      el.appendChild(span1);
+      el.appendChild(span2);
+    }
+  }, 30);
+
+  intervals.set(el, id);
+}
+
 function artistUpdate(firstname) {
   const artist = artists[firstname];
-  const nameToUpdate = document.getElementById("artistName");
-  nameToUpdate.innerHTML = artist.name;
-  const track1ToUpdate = document.getElementById("track1");
-  track1ToUpdate.innerHTML = artist.track1;
-  const album1ToUpdate = document.getElementById("album1");
-  album1ToUpdate.innerHTML = artist.album1;
-  const release1ToUpdate = document.getElementById("release1");
-  release1ToUpdate.innerHTML = artist.release1;
+  title.setAttribute("data-value", artist.name);
 
-  const track2ToUpdate = document.getElementById("track2");
-  track2ToUpdate.innerHTML = artist.track2;
-  const album2ToUpdate = document.getElementById("album2");
-  album2ToUpdate.innerHTML = artist.album2;
-  const release2ToUpdate = document.getElementById("release2");
-  release2ToUpdate.innerHTML = artist.release2;
+  track.innerHTML = artist.track1;
+  track.setAttribute("data-value", artist.track1);
+  album_1.innerHTML = artist.album1;
+  album_1.setAttribute("data-value", artist.album1);
+  release_1.innerHTML = artist.release1;
+  release_1.setAttribute("data-value", artist.release1);
 
-  const track3ToUpdate = document.getElementById("track3");
-  track3ToUpdate.innerHTML = artist.track3;
-  const album3ToUpdate = document.getElementById("album3");
-  album3ToUpdate.innerHTML = artist.album3;
-  const release3ToUpdate = document.getElementById("release3");
-  release3ToUpdate.innerHTML = artist.release3;
+  track_2.innerHTML = artist.track2;
+  track_2.setAttribute("data-value", artist.track2);
+  album_2.innerHTML = artist.album2;
+  album_2.setAttribute("data-value", artist.album2);
+  release_2.innerHTML = artist.release2;
+  release_2.setAttribute("data-value", artist.release2);
+
+  track_3.innerHTML = artist.track3;
+  track_3.setAttribute("data-value", artist.track3);
+  album_3.innerHTML = artist.album3;
+  album_3.setAttribute("data-value", artist.album3);
+  release_3.innerHTML = artist.release3;
+  release_3.setAttribute("data-value", artist.release3);
 
   const imgToUpdate = document.getElementById("profileimg");
   imgToUpdate.src = artist.image;
@@ -126,34 +187,55 @@ function artistUpdate(firstname) {
 const cardJuliette = document.getElementById("card-juliette");
 cardJuliette.addEventListener("click", () => {
   artistUpdate("juliette");
+  for (const element of elements) {
+    animateTitle(element);
+  }
 });
 
 const cardThomas = document.getElementById("card-thomas");
 cardThomas.addEventListener("click", () => {
   artistUpdate("thomas");
+  for (const element of elements) {
+    animateTitle(element);
+  }
 });
 
 const cardTeddy = document.getElementById("card-teddy");
 cardTeddy.addEventListener("click", () => {
   artistUpdate("teddy");
+  for (const element of elements) {
+    animateTitle(element);
+  }
 });
 
 const cardCecile = document.getElementById("card-cecile");
 cardCecile.addEventListener("click", () => {
   artistUpdate("cecile");
+  for (const element of elements) {
+    animateTitle(element);
+  }
 });
 
 const cardRomain = document.getElementById("card-romain");
 cardRomain.addEventListener("click", () => {
   artistUpdate("romain");
+  for (const element of elements) {
+    animateTitle(element);
+  }
 });
 
 const cardMaxime = document.getElementById("card-maxime");
 cardMaxime.addEventListener("click", () => {
   artistUpdate("maxime");
+  for (const element of elements) {
+    animateTitle(element);
+  }
 });
 
 const cardJoel = document.getElementById("card-joel");
 cardJoel.addEventListener("click", () => {
   artistUpdate("joel");
+  for (const element of elements) {
+    animateTitle(element);
+  }
 });

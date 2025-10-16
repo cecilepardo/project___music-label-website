@@ -1353,22 +1353,51 @@
     </svg>
     <!-- Navbar -->
     <nav>
-        <img src="./assets/icons/logo.png">
-        <!-- Change ".underline" class according to the page we are on. -->
-        <a href="index.html">Home</a>
-        <a href="artists.html">Artists</a>
-        <a href="discography.html">Discography</a>
-        <a class="underline" href="events.html">Events</a>
-        <a href="shop.html">Shop</a>
-        <a href="about.html">About</a>
-        <svg class="cart" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
-            <g fill="none" stroke-width="1">
-                <path
-                    d="M3.555 14.257c-.718-3.353-1.078-5.03-.177-6.143C4.278 7 5.993 7 9.422 7h5.156c3.43 0 5.143 0 6.044 1.114c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076c-.825.667-1.987.667-4.311.667h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2Z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 11h18m-11 3h4m4-5l-3-6M6 9l3-6"
-                    opacity=".6" />
-            </g>
-        </svg>
+        <div class="navDesktop">
+            <img src="./assets/icons/logo.png">
+            <!-- Change ".underline" class according to the page we are on. -->
+            <a href="index.html">Home</a>
+            <a href="artists.html">Artists</a>
+            <a href="discography.html">Discography</a>
+            <a class="underline" href="events.html">Events</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <svg class="cart" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
+                <g fill="none" stroke-width="1">
+                    <path
+                        d="M3.555 14.257c-.718-3.353-1.078-5.03-.177-6.143C4.278 7 5.993 7 9.422 7h5.156c3.43 0 5.143 0 6.044 1.114c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076c-.825.667-1.987.667-4.311.667h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 11h18m-11 3h4m4-5l-3-6M6 9l3-6"
+                        opacity=".6" />
+                </g>
+            </svg>
+        </div>
+        <div class="burgerNav">
+            <svg id="burgerToggle" class="ham " viewBox="0 0 100 100" width="80">
+                <path class="line top"
+                    d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
+                <path class="line middle"
+                    d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272" />
+                <path class="line bottom"
+                    d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
+            </svg>
+        </div>
+        <div class="burgerMenu">
+            <a href="index.html">Home</a>
+            <a href="artists.html">Artists</a>
+            <a href="discography.html">Discography</a>
+            <a href="events.html">Events</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <svg class="cart" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
+                <g fill="none" stroke-width="1">
+                    <path
+                        d="M3.555 14.257c-.718-3.353-1.078-5.03-.177-6.143C4.278 7 5.993 7 9.422 7h5.156c3.43 0 5.143 0 6.044 1.114c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076c-.825.667-1.987.667-4.311.667h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 11h18m-11 3h4m4-5l-3-6M6 9l3-6"
+                        opacity=".6" />
+                </g>
+            </svg>
+        </div>
+
     </nav>
     <section class="burgerNav">
         <svg id="burgerToggle" class="ham " viewBox="0 0 100 100" width="80">
@@ -1403,47 +1432,78 @@
             <img src="./events/featured-event.png" alt="Evenement à la une">
             <div class="text">
                 <h2>Concert de Romain</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam cumque magni similique eligendi modi
-                    vel
-                    eveniet iste repudiandae odio, sit aspernatur quae reprehenderit. Nemo odit nostrum beatae quia,
-                    suscipit eos!</p>
+                <p>Préparez-vous à vivre une soirée inoubliable au Zénith de Nantes avec Romain,
+                    l’artiste qui fait vibrer les cœurs et transcender les émotions.
+                    Des hits qui ont marqué sa carrière aux
+                    morceaux inédits de son dernier album, le public sera plongé dans une atmosphère à la fois intime et
+                    électrisante.</p>
 
                 <div class="map-container">
-
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5418.759128787418!2d-1.6305082234300214!3d47.228720971157635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ecc3914960bf%3A0x182a00d2a680f5ae!2sZ%C3%A9nith%20Nantes%20M%C3%A9tropole!5e0!3m2!1sfr!2sfr!4v1759936865021!5m2!1sfr!2sfr"
-                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        style="border:0; width:100%; height:300px; filter: grayscale(60%) contrast(120%) brightness(90%); border-radius:12px; box-shadow:0 0 10px 2px #f63fff77;"
+                        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
+
                 <div class="timer" data-date="2025-12-31T23:59:59">
                     <div class="flip-unit" id="days"><span>0</span><small>j</small></div>
                     <div class="flip-unit" id="hours"><span>0</span><small>h</small></div>
                     <div class="flip-unit" id="minutes"><span>0</span><small>m</small></div>
                     <div class="flip-unit" id="seconds"><span>0</span><small>s</small></div>
+
                 </div>
 
-                <a class="button" href="#" aria-label="Accès Shop">Shop</a>
+                <div class="button-group">
+                    <a class="button" href="shop.html" aria-label="Accès Shop">Shop</a>
+                    <a class="button calendar-btn" data-date="2025-12-31T23:59:59" target="_blank"
+                        aria-label="Ajouter au calendrier">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                            <path
+                                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zm0-13H5V6h14v1z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="section">
             <img src="./events/event.png" alt="Evenement 1">
             <div class="text">
                 <h2>Concert de Cécile</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam cumque magni similique eligendi modi
-                    vel
-                    eveniet iste repudiandae odio, sit aspernatur quae reprehenderit. Nemo odit nostrum beatae quia,
-                    suscipit eos!</p>
-                <a class="button" href="#" aria-label="Accès Shop">Shop</a>
+                <p>Cécile revient sur scène pour présenter son nouvel album, une œuvre pleine de mélodies envoûtantes et
+                    de textes qui touchent en plein cœur. Chaque chanson est une invitation à un voyage musical unique,
+                    entre émotions intimes et énergie communicative.</p>
+                <div class="button-group">
+                    <a class="button" href="shop.html" aria-label="Accès Shop">Shop</a>
+                    <a class="button calendar-btn" data-date="2026-01-06T20:59:59" target="_blank"
+                        aria-label="Ajouter au calendrier">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                            <path
+                                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zm0-13H5V6h14v1z" />
+                        </svg>
+                    </a>
+                </div>
+
             </div>
         </div>
         <div class="section">
             <img src="./events/image.png" alt="Evenement 2">
             <div class="text">
                 <h2>Nouvel album de Thomas</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam cumque magni similique eligendi modi
-                    vel
-                    eveniet iste repudiandae odio, sit aspernatur quae reprehenderit. Nemo odit nostrum beatae quia,
-                    suscipit eos!</p>
-                <a class="button" href="#" aria-label="Accès Shop">Shop</a>
+                <p>L’attente est terminée : Thomas revient avec un album inédit, mélange parfait de mélodies puissantes,
+                    paroles intimistes et énergie contagieuse. Chaque morceau est une plongée dans son univers, entre
+                    émotions brutes et moments lumineux, pensé pour toucher chacun d’entre nous.</p>
+                <div class="button-group">
+                    <a class="button" href="shop.html" aria-label="Accès Shop">Shop</a>
+                    <a class="button calendar-btn" data-date="2026-07-15T20:59:59" target="_blank"
+                        aria-label="Ajouter au calendrier">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                            <path
+                                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zm0-13H5V6h14v1z" />
+                        </svg>
+                    </a>
+                </div>
+
             </div>
         </div>
 
@@ -1452,36 +1512,60 @@
             <img src="./events/image2.png" alt="Evenement 3">
             <div class="text">
                 <h2>Tournée national de Juliette</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam cumque magni similique
-                    eligendi modi vel
-                    eveniet iste repudiandae odio, sit aspernatur quae reprehenderit. Nemo odit nostrum beatae
-                    quia,
-                    suscipit eos!</p>
-                <a class="button" href="#" aria-label="Accès Shop">Shop</a>
+                <p>La scène l’attend, et cette fois, Juliette traverse la France entière pour partager son univers
+                    musical riche et vibrant. Entre chansons émouvantes, rythmes entraînants et moments de complicité
+                    avec le public, chaque étape de la tournée promet des instants uniques et mémorables.</p>
+                <div class="button-group">
+                    <a class="button" href="shop.html" aria-label="Accès Shop">Shop</a>
+                    <a class="button calendar-btn" data-date="2026-04-21T20:59:59" target="_blank"
+                        aria-label="Ajouter au calendrier">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                            <path
+                                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zm0-13H5V6h14v1z" />
+                        </svg>
+                    </a>
+                </div>
+
             </div>
         </div>
         <div class="section">
             <img src="./events/image.png" alt="Evenement 4">
             <div class="text">
                 <h2>Dedicace de Teddy</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam cumque magni similique
-                    eligendi modi vel
-                    eveniet iste repudiandae odio, sit aspernatur quae reprehenderit. Nemo odit nostrum beatae
-                    quia,
-                    suscipit eos!</p>
-                <a class="button" href="#" aria-label="Accès Shop">Shop</a>
+                <p>Fans de Teddy, préparez-vous ! L’artiste part à la rencontre de son public dans tous les grands
+                    centres commerciaux de France. Une occasion unique de rencontrer Teddy, d’échanger quelques mots, de
+                    prendre des photos et bien sûr, de repartir avec des autographes personnalisés.</p>
+                <div class="button-group">
+                    <a class="button" href="shop.html" aria-label="Accès Shop">Shop</a>
+                    <a class="button calendar-btn" data-date="2026-08-02T20:59:59" target="_blank"
+                        aria-label="Ajouter au calendrier">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                            <path
+                                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zm0-13H5V6h14v1z" />
+                        </svg>
+                    </a>
+                </div>
+
             </div>
         </div>
         <div class="section">
             <img src="./events/image2.png" alt="Evenement 5">
             <div class="text">
                 <h2>Nouveau Single pour Joel</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam cumque magni similique
-                    eligendi modi vel
-                    eveniet iste repudiandae odio, sit aspernatur quae reprehenderit. Nemo odit nostrum beatae
-                    quia,
-                    suscipit eos!</p>
-                <a class="button" href="#" aria-label="Accès Shop">Shop</a>
+                <p>L’artiste revient avec un titre inédit, prêt à captiver vos oreilles et à s’inviter dans toutes vos
+                    playlists. Entre rythmes accrocheurs, paroles marquantes et vibes irrésistibles, ce single est une
+                    véritable invitation à chanter, danser et se laisser emporter.</p>
+                <div class="button-group">
+                    <a class="button" href="shop.html" aria-label="Accès Shop">Shop</a>
+                    <a class="button calendar-btn" data-date="2026-11-11T20:59:59" target="_blank"
+                        aria-label="Ajouter au calendrier">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                            <path
+                                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zm0-13H5V6h14v1z" />
+                        </svg>
+                    </a>
+                </div>
+
             </div>
         </div>
     </div>
@@ -1489,6 +1573,7 @@
         <p> 🎧 All rights preserved 🎧 </p>
     </footer>
     <script src="js/events.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
