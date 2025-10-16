@@ -1,0 +1,242 @@
+@import url(/styles/style.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Zalando Sans Expanded", sans-serif;
+
+}
+
+body {
+  background-color: #130418;
+}
+
+/* .header {
+  display: flex;
+  justify-content: space-around;
+  align-items: left;
+  
+  flex-wrap: wrap;
+  background: none;
+ 
+} */
+
+.title {
+  font-size: 42px;
+}
+.bateau {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+
+}
+/* EFFET GLITCH DEBUT */
+
+.glitch-title {
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+
+  animation: glitch-title 500ms infinite;
+  position: relative;
+}
+
+.glitch-title span {
+  position: absolute;
+  /* top: -50;
+  left: 50%;  */
+  top: 0;
+  left: 0;
+}
+
+.glitch-title span:first-child {
+  animation: glitch-title 650ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-0.025em, -0.0125em);
+  color: white;
+  opacity: 0.8;
+}
+
+.glitch-title span:last-child {
+  animation: glitch-title 375ms infinite;
+  clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
+  transform: translate(0.0125em, 0.025em);
+  color: white;
+  opacity: 0.8;
+}
+
+
+
+@keyframes glitch-title {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  14.99% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  49.99% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      -0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  99.99% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      -0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+}
+
+/* EFFET GLITCH FIN */
+
+#backgroundTopo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  fill: rgba(254, 2, 198, 0.1);
+  stroke: rgba(254, 2, 198, 0.2);
+  stroke-width: 0.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: draw 6s ease-in-out infinite alternate;
+  transition: transform 0.1s ease-out;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+
+
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.disk {
+
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+  background-color: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  height: 600px;
+  width: 300px;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(195, 195, 195, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.disk::before {
+  content: "";
+  position: absolute;
+  top: var(--mouse-y);
+  left: var(--mouse-x);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 60%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: top 0.1s, left 0.1s;
+}
+
+.disk.init {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.disk.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.disk.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.disk:hover {
+  transform: scale(1.02);
+  transition: .3s ease;
+}
+
+.disk-cover {
+  width: 250px;
+  object-fit: contain;
+  border-radius: 20px;
+  position: relative;
+  animation: glitch 0.3s ease-in-out 2;
+  box-shadow: 0 0 15px, rgba(230, 61, 237, 0.6);
+  transition: box-shadow 0.2s ease-in-out;
+}
+.disk-cover:hover {
+  box-shadow: 0 0 25px rgba(230, 61, 237, 0.6);
+}
+
+.disk-title {
+  justify-content: center;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+.disk-description {
+  justify-content: center;
+  font-family: 'Montserrat';
+  font-size: small;
+  color: #130418;
+
+  color: #ffffff;
+}
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-1px, 1px); }
+  40% { transform: translate(1px, -1px); }
+  60% { transform: translate(-1px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0); }
+}
+.glitch {
+  animation: glitch 0.3s ease-in-out 2;
+}
+
+.disk:hover .disk-cover {
+  animation: glitch 0.3s ease-in-out 2;
+}
+
+

@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/artists.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
-    <title>Shop Neon 808</title>
-    <link rel="stylesheet" href="styles/shop.css" />
-    <link rel="stylesheet" href="styles/style.css" />
+    <script src="/js/artists.js" defer></script>
+    <script src="/js/main.js" defer></script>
+    <title>Artists</title>
   </head>
 
-  <body>
+  <body class="magicpattern">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 600 600"
@@ -27,314 +27,105 @@
       />
     </svg>
     <nav>
-      <div class="navDesktop">
-        <img src="./assets/icons/logo.png" />
-        <!-- Change ".underline" class according to the page we are on. -->
-        <a class="underline" href="index.html">Home</a>
-        <a href="artists.html">Artists</a>
-        <a href="discography.html">Discography</a>
-        <a href="events.html">Events</a>
-        <a href="shop.html">Shop</a>
-        <a href="about.html">About</a>
-        <svg
-          class="cart"
-          xmlns="http://www.w3.org/2000/svg"
-          width="200"
-          height="200"
-          viewBox="0 0 24 24"
-        >
-          <g fill="none" stroke-width="1">
-            <path
-              d="M3.555 14.257c-.718-3.353-1.078-5.03-.177-6.143C4.278 7 5.993 7 9.422 7h5.156c3.43 0 5.143 0 6.044 1.114c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076c-.825.667-1.987.667-4.311.667h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2Z"
-            />
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3 11h18m-11 3h4m4-5l-3-6M6 9l3-6"
-              opacity=".6"
-            />
-          </g>
-        </svg>
-      </div>
-      <div class="burgerNav">
-        <svg id="burgerToggle" class="ham" viewBox="0 0 100 100" width="80">
-          <path
-            class="line top"
-            d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272"
-          />
-          <path
-            class="line middle"
-            d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272"
-          />
-          <path
-            class="line bottom"
-            d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272"
-          />
-        </svg>
-      </div>
-      <div class="burgerMenu">
-        <a href="index.html">Home</a>
-        <a href="artists.html">Artists</a>
-        <a href="discography.html">Discography</a>
-        <a href="events.html">Events</a>
-        <a href="shop.html">Shop</a>
-        <a href="about.html">About</a>
-        <svg
-          class="cart"
-          xmlns="http://www.w3.org/2000/svg"
-          width="200"
-          height="200"
-          viewBox="0 0 24 24"
-        >
-          <g fill="none" stroke-width="1">
-            <path
-              d="M3.555 14.257c-.718-3.353-1.078-5.03-.177-6.143C4.278 7 5.993 7 9.422 7h5.156c3.43 0 5.143 0 6.044 1.114c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076c-.825.667-1.987.667-4.311.667h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2Z"
-            />
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3 11h18m-11 3h4m4-5l-3-6M6 9l3-6"
-              opacity=".6"
-            />
-          </g>
-        </svg>
-      </div>
-    </nav>
-
-    <h1 class="title">Shop</h1>
-
-    <section class="burgerNav">
-      <svg id="burgerToggle" class="ham" viewBox="0 0 100 100" width="80">
+    <div class="navDesktop">
+    <img src="./assets/icons/logo.png">
+    <!-- Change ".underline" class according to the page we are on. -->
+    <a href="index.html">Home</a>
+    <a  class="underline" href="artists.html">Artists</a>
+    <a href="discography.html">Discography</a>
+    <a href="events.html">Events</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <svg class="cart" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
+      <g fill="none" stroke-width="1">
         <path
-          class="line top"
-          d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272"
-        />
-        <path
-          class="line middle"
-          d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272"
-        />
-        <path
-          class="line bottom"
-          d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272"
-        />
+          d="M3.555 14.257c-.718-3.353-1.078-5.03-.177-6.143C4.278 7 5.993 7 9.422 7h5.156c3.43 0 5.143 0 6.044 1.114c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076c-.825.667-1.987.667-4.311.667h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2Z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 11h18m-11 3h4m4-5l-3-6M6 9l3-6" opacity=".6" />
+      </g>
+    </svg>
+    </div>
+    <div class="burgerNav">
+      <svg id="burgerToggle" class="ham " viewBox="0 0 100 100" width="80">
+        <path class="line top"
+          d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
+        <path class="line middle"
+          d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272" />
+        <path class="line bottom"
+          d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
       </svg>
-      <div class="burgerMenu">
-        <a href="index.html">Home</a>
-        <a href="artists.html">Artists</a>
-        <a href="discography.html">Discography</a>
-        <a href="events.html">Events</a>
-        <a href="shop.html">Shop</a>
-        <a href="about.html">About</a>
-        <svg
-          class="cart"
-          xmlns="http://www.w3.org/2000/svg"
-          width="200"
-          height="200"
-          viewBox="0 0 24 24"
-        >
-          <g fill="none" stroke-width="1">
-            <path
-              d="M3.555 14.257c-.718-3.353-1.078-5.03-.177-6.143C4.278 7 5.993 7 9.422 7h5.156c3.43 0 5.143 0 6.044 1.114c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076c-.825.667-1.987.667-4.311.667h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2Z"
-            />
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3 11h18m-11 3h4m4-5l-3-6M6 9l3-6"
-              opacity=".6"
-            />
-          </g>
-        </svg>
       </div>
-    </section>
-    <main class="shop">
-      <section class="Products">
-        <div class="ProductsCard slider-card">
-          <div class="slider">
-            <img
-              src="./images/Merch-img/sweater-face.png"
-              class="slide active"
-              alt="sweater-face"
-            />
-            <img
-              src="./images/Merch-img/sweater-back.png"
-              class="slide"
-              alt="sweater-back"
-            />
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
+    <div class="burgerMenu">
+      <a href="index.html">Home</a>
+      <a href="artists.html">Artists</a>
+      <a href="discography.html">Discography</a>
+      <a href="events.html">Events</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <svg class="cart" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
+        <g fill="none" stroke-width="1">
+          <path
+            d="M3.555 14.257c-.718-3.353-1.078-5.03-.177-6.143C4.278 7 5.993 7 9.422 7h5.156c3.43 0 5.143 0 6.044 1.114c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076c-.825.667-1.987.667-4.311.667h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 11h18m-11 3h4m4-5l-3-6M6 9l3-6" opacity=".6" />
+        </g>
+      </svg>
+    </div>
+
+  </nav>
+    <div class="global">
+      <div class="container">
+        <div class="boxLeft">
+          <h1 class="glitch" id="artistName"><span aria-hidden="true">THOMAS</span><span aria-hidden="true">THOMAS</span>THOMAS</h1>
+          <div class="highlightedTracks">
+            <div>
+              <h2 data-value="YOUNG, WILD & FREE" id="track1">YOUNG, WILD & FREE</h2>
+              <h3 id="album1" data-value="Mac and Devin">Mac and Devin</h3>
+              <p id="release1" data-value="2011">2011</p>
+            </div>
+            <div>
+              <h2 id="track2" data-value="BLACK AND YELLOW">BLACK AND YELLOW</h2>
+              <h3 id="album2" data-value="Rolling papers">Rolling papers</h3>
+              <p id="release2" data-value="2011">2011</p>
+            </div>
+            <div>
+              <h2 id="track3" data-value="STILL D.R.E">STILL D.R.E</h2>
+              <h3 id="album3" data-value="'2001'">'2001'</h3>
+              <p id="release3" data-value="2011">1999</p>
+            </div>
+            <div><a class="btnTrack">All Tracks</a></div>
           </div>
-          <p class="Description">Hoodie Joel 808</p>
-          <div class="button-choice">
-            <a class="shop-size" href="#">S</a>
-            <a class="shop-size" href="#">M</a>
-            <a class="shop-size" href="#">L</a>
-          </div>
-          <button class="button">Add</button>
         </div>
-
-        <div class="ProductsCard slider-card">
-          <div class="slider">
-            <img
-              src="./images/Merch-img/t-shirt-2-face.png"
-              class="slide active"
-              alt="t-shirt face 2"
-            />
-            <img
-              src="./images/Merch-img/t-shirt-2-dos.png"
-              class="slide"
-              alt="t-shirt-2-back"
-            />
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-          </div>
-
-          <p class="Description">T-shirt Romain Neon 808</p>
-          <div class="button-choice">
-            <a class="shop-size" href="#">S</a>
-            <a class="shop-size" href="#">M</a>
-            <a class="shop-size" href="#">L</a>
-          </div>
-          <button class="button">Add</button>
+        <div class="boxRight">
+          <img
+            src="/assets/images/portrait-thomas.png"
+            alt="Artiste"
+            class="artistPicture"
+            id="profileimg"
+          />
         </div>
-
-        <div class="ProductsCard slider-card">
-          <div class="slider">
-            <img
-              src="./images/Merch-img/cargo-face.png"
-              class="slide active"
-              alt="cargo-face"
-            />
-            <img
-              src="./images/Merch-img/cargo-back.png"
-              class="slide"
-              alt="cargo-back"
-            />
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-          </div>
-
-          <p class="Description">Cargo Teddy 808</p>
-          <div class="button-choice">
-            <a class="shop-size" href="#">S</a>
-            <a class="shop-size" href="#">M</a>
-            <a class="shop-size" href="#">L</a>
-          </div>
-          <button class="button">Add</button>
+      </div>
+      <div class="container-card">
+        <div class="card" id="card-juliette">
+          <img src="/assets/images/card_juliette.png" alt="" />
         </div>
-
-        <div class="ProductsCard slider-card">
-          <div class="slider">
-            <img
-              src="./images/Merch-img/cap-face.png"
-              class="slide active"
-              alt="cap-face"
-            />
-            <img src="./images/Merch-img/cap.png" class="slide" alt="aside" />
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-          </div>
-
-          <p class="Description">Casquette Thomas 808</p>
-          <div class="button-choice">
-            <a class="shop-size" href="#">S</a>
-            <a class="shop-size" href="#">M</a>
-            <a class="shop-size" href="#">L</a>
-          </div>
-          <button class="button">Add</button>
+        <div class="card" id="card-thomas">
+          <img src="/assets/images/card_thomas.png" alt="" />
         </div>
-
-        <div class="ProductsCard slider-card">
-          <div class="slider">
-            <img
-              src="./images/Merch-img/pull-blanc-face.png"
-              class="slide active"
-              alt="pull-face"
-            />
-            <img
-              src="./images/Merch-img/pull-blanc-dos.png"
-              class="slide"
-              alt="pull-back"
-            />
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-          </div>
-
-          <p class="Description">Sweater Cecile 808</p>
-          <div class="button-choice">
-            <a class="shop-size" href="#">S</a>
-            <a class="shop-size" href="#">M</a>
-            <a class="shop-size" href="#">L</a>
-          </div>
-          <button class="button">Add</button>
+        <div class="card" id="card-teddy">
+          <img src="/assets/images/card_teddy.png" alt="" />
         </div>
-
-        <div class="ProductsCard slider-card">
-          <div class="slider">
-            <img
-              src="./images/Merch-img/totbag-face.png"
-              class="slide active"
-              alt="totebag-face"
-            />
-            <img
-              src="./images/Merch-img/totbag-back.png"
-              class="slide"
-              alt="totebag-back"
-            />
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-          </div>
-
-          <p class="Description">Totebag Juliette 808</p>
-          <div class="button-choice">
-            <a class="shop-size" href="#">S</a>
-            <a class="shop-size" href="#">M</a>
-            <a class="shop-size" href="#">L</a>
-          </div>
-
-          <button class="button">Add</button>
+        <div class="card" id="card-maxime">
+          <img src="/assets/images/card_maxime.png" alt="" />
         </div>
-        <div class="ProductsCard slider-card">
-          <div class="slider">
-            <img
-              src="./images/Merch-img/cargo-face.png"
-              class="slide active"
-              alt="cargo-face"
-            />
-            <img
-              src="./images/Merch-img/cargo-back.png"
-              class="slide"
-              alt="cargo-back"
-            />
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-          </div>
-
-          <p class="Description">Cargo Maxime 808</p>
-          <div class="button-choice">
-            <a class="shop-size" href="#">S</a>
-            <a class="shop-size" href="#">M</a>
-            <a class="shop-size" href="#">L</a>
-          </div>
-          <button class="button">Add</button>
+        <div class="card" id="card-cecile">
+          <img src="/assets/images/card_cecile.png" alt="" />
         </div>
-
-        <div class="ProductsCard slider-card">
-          <div class="slider">
-            <img
-              src="./images/Merch-img/tableau-face.png"
-              class="slide active"
-              alt="tableau"
-            />
-          </div>
-
-          <p class="Description">Painting 808</p>
-          <button class="button">Add</button>
+        <div class="card" id="card-joel">
+          <img src="/assets/images/card_joel.png" alt="" />
         </div>
-      </section>
-    </main>
-    <footer>
-      <p>🎧 All rights preserved 🎧</p>
-    </footer>
-    <script src="js/shop.js"></script>
+        <div class="card" id="card-romain">
+          <img src="/assets/images/card_romain.png" alt="" />
+        </div>
+      </div>
+    </div>
   </body>
 </html>
