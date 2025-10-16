@@ -1,7 +1,6 @@
 //--Read more - Read less--//
 
-function test() {
-    console.log ("coucou")
+function showMoreLess() {
     const hiddenText = document.querySelector('.hidden-text');
     const button = document.querySelector('.read-more-button');
 

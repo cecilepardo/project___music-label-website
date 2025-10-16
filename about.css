@@ -46,15 +46,15 @@ main {
 }
 
 .sectionabout{
-    height: 750px;
-    width: 500px;
+    width: 700px;
+    height: 900px;
     background-color:#130418;
     text-align: center;
     font-size: x-large;
     border-style: unset;
     box-shadow: 0 0 10px #090005;
     border-radius: 10px;
-    padding: 20px;
+    padding: 50px;
     background: rgba(0, 0, 0, 0.1);
     border-radius: 16px;
     box-shadow: 0 0 10px #363234;
@@ -78,7 +78,6 @@ main {
 .about {
     font-size: larger;
     margin: 20px;
-    max-width: 40%;
 }
 .hidden-text {
   display: none;
@@ -90,7 +89,8 @@ main {
   background: #363234;
   width: 150px;
   height: 30px;
-  border: 1px solid #363234;
+  border: 1px solid #f6f4f5;
+  border-radius: 10px;
   overflow: hidden;
   z-index: 0;
   position: relative;
@@ -111,11 +111,7 @@ main {
   top: 0;
   border-radius: 0;
 }
-.social {
-    width: 3rem;
-    margin: 1rem;
-    cursor: pointer;
-}
+
 /*--Contact--*/
 form {
     display: flex;
@@ -244,22 +240,22 @@ a span:nth-child(3) {
     background: #363234;
     padding: 40px;
     border-radius: 10px;
-    border: 2px solid #4d245b;
-    box-shadow: 0 0 30px rgba(134, 65, 224, 0.816);
+    border: 2px solid #f6f4f5;
+    box-shadow: 0 0 30px #363234(134, 65, 224, 0.816);
     text-align: center;
     animation: slideIn 0.4s ease;
     min-width: 300px;
   }
   
   .popup-content h3 {
-    color:#8400ff;
+    color:#f6f4f5;
     margin-bottom: 15px;
     font-size: 24px;
   }
   .popup-close {
     background: #363234;
-    color: #8400ff;
-    border: none;
+    color: #f6f4f5;
+    border: 1px solid #f6f4f5;
     padding: 10px 30px;
     border-radius: 5px;
     cursor: pointer;
@@ -271,7 +267,7 @@ a span:nth-child(3) {
 
   .popup-close:hover {
     background: #363234;
-    box-shadow: 0 0 15px #4d245b;
+    box-shadow: 0 0 15px #f6f4f5;
   }
 
   @keyframes fadeIn {
@@ -289,6 +285,20 @@ a span:nth-child(3) {
       transform: translate(-50%, -50%);
     }
   }
+
+/*--Social--*/
+.socialIcons {
+  width: 1500px;
+  height: auto;
+  text-align: center;
+  justify-content: center;
+}
+.social {
+    width: 3rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
 /*--Quotes--*/
 
 .talk {
@@ -315,7 +325,8 @@ a span:nth-child(3) {
     
 }
 .quote-box {
-    width: fit-content;
+    width: 500px;
+    height: 120px;
     background-color: #130418;
     border-radius: 10px;
     padding: 25px;
