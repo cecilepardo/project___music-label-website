@@ -366,7 +366,7 @@ h3 {
       #8400ff 70%,
       #ffffff 100%);
   background-size: 1200% 1200%;
-  /* -webkit-background-clip: text; */
+  -webkit-background-clip: text;
   /* -webkit-text-fill-color: transparent; */
 
   animation: gradientNeonSmooth 10s linear infinite,
