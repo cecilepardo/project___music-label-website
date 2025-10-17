@@ -1,0 +1,120 @@
+@import url(/styles/style.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: rgb(216, 216, 216);
+  cursor: default;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 0.9;
+  padding: 0;
+  color: white;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+p {
+  color: rgb(136, 136, 136);
+  font-weight: 100;
+}
+
+
+#profileimg {
+  filter: drop-shadow(0em 0em 3em #a63dbe8d);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.global {
+  /* position: fixed;
+  z-index: -1;
+  top: 0; */
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.boxLeft {
+  display: flex;
+  flex-direction: column;
+  padding: 12rem 0 0 5rem;
+  align-items: baseline;
+}
+
+.artistPicture {
+  width: 50rem;
+  transform: translate(-130px, -70px);
+}
+
+.highlightedTracks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 5rem;
+  padding-left: 1rem;
+}
+
+
+.card img {
+  width: 15rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  box-shadow: 0 0 1em 0.1em var(--clr-neon);
+
+}
+
+.card img:hover {
+  transition: 0.5s ease-in-out;
+  transform: translateY(-200px);
+}
+
+.container-card {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  /* transform: translateY(-500px); */
+  position: absolute;
+  bottom: -25%;
+}
+
+#backgroundTopo {
+  width: 100%;
+  z-index: -1;
+  position: fixed;
+  fill: rgba(254, 2, 198, 0.25);
+  stroke: rgba(254, 2, 198, 0.4);
+  stroke-width: 0.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: draw 6s ease-in-out infinite alternate;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
