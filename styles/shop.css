@@ -1,158 +1,153 @@
-body {
-    background-color: #130418;
+@import url(/styles/style.css);
 
+body {
+  background-color: #130418;
 }
 
 #backgroundTopo {
-    top: 0;
-    width: 100%;
-    z-index: -1;
-    position: fixed;
-    fill: rgba(254, 2, 198, 0.1);
-    stroke: rgba(254, 2, 198, 0.2);
-    stroke-width: 0.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-dasharray: 4000;
-    stroke-dashoffset: 4000;
-    animation: draw 6s ease-in-out infinite alternate;
+  width: 100%;
+  z-index: -1;
+  position: fixed;
+  fill: rgba(254, 2, 198, 0.1);
+  stroke: rgba(254, 2, 198, 0.2);
+  stroke-width: 0.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: draw 6s ease-in-out infinite alternate;
 }
 
 /* h1 shop */
 .title {
-    font-size: 42px;
+  font-size: 42px;
 }
 
 .shop {
-    padding: 5rem 5rem;
+  padding: 5rem 5rem;
 }
 
 .shop-size.active {
-    background-color: #130418;
-    color: #fff;
-    border-color: #f63fff;
+  background-color: #130418;
+  color: #fff;
+  border-color: #f63fff;
 }
 
 /* Début des cartes merch */
 .Products {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 100px;
-    max-width: 2000px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 100px;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 
 .ProductsCard {
-    padding: 1.2rem;
-    text-align: center;
-    transition: transform 0.2s ease;
-    background: rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    border: 1px solid rgba(195, 195, 195, 0.3);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
-    position: relative;
-    z-index: 1;
+  padding: 1.2rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(195, 195, 195, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .ProductsCard.selected {
-    box-shadow: 0 10px 40px rgba(246, 63, 255, 0.25);
-    transform: translateY(-4px);
-    border: 1px solid rgba(246,63,255,0.35);
+  box-shadow: 0 10px 40px rgba(246, 63, 255, 0.25);
+  transform: translateY(-4px);
+  border: 1px solid rgba(246, 63, 255, 0.35);
 }
 
 .ProductsCard:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .ProductsCard img {
-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    display: block;
-    pointer-events: none;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  pointer-events: none;
 }
 
 /* Fin des cartes merch */
 
 .Description {
-    margin: 2rem 0;
-    font-size: 1rem;
-    font-weight: bold;
+  margin: 2rem 0;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .button-choice .shop-size:hover {
-    box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.5);
-    color: #ffffff;
-    transform: scale(1.08);
+  box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  transform: scale(1.08);
 }
 
 .button-choice {
   margin-bottom: 1.2rem;
 }
 
-
 .shop-size {
-    display: inline-block;
-    padding: 6px 10px;
-    margin: 5px;
-    border: 1px solid #ffffff77;
-    background: transparent;
-    border-radius: 4px;
-    text-decoration: none;
-    cursor: pointer;
-    user-select: none;
-    position: relative;
-    z-index: 2;
-    pointer-events: auto;
-
+  display: inline-block;
+  padding: 6px 10px;
+  margin: 5px;
+  border: 1px solid #ffffff77;
+  background: transparent;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
 }
 
 .shop-size.active {
-    background-color: #130418;
-    color: #fff;
-    border: 2px solid #fff;
-    box-shadow: 0 0 15px 6px rgba(246, 63, 255, 0.45);
-    transform: scale(1.12);
+  background-color: #130418;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 0 15px 6px rgba(246, 63, 255, 0.45);
+  transform: scale(1.12);
 }
 
 .shop-size:hover {
-    transition: all 0.3s  ease;
+  transition: all 0.3s ease;
 }
 
 .button-choice:hover {
-    color: #ffffff;
-    cursor: pointer;
+  color: #ffffff;
+  cursor: pointer;
 }
 
-
 @media (max-width: 900px) {
-    .Products {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-    }
+  .Products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
 }
 
 @media (max-width: 600px) {
-    .Products {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
+  .Products {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 }
-
-
 
 .slider {
   position: relative;
   width: 100%;
-  height: 300px; 
+  height: 300px;
   overflow: hidden;
   border-radius: 20px;
 }
@@ -170,16 +165,16 @@ width: 100%;
 }
 
 .slide.active {
-opacity: 1;
-z-index: 2;
+  opacity: 1;
+  z-index: 2;
 }
 
-
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(19,4,24,0.6);
+  background: rgba(19, 4, 24, 0.6);
   color: #fff;
   border: none;
   padding: 8px 12px;
@@ -188,12 +183,20 @@ z-index: 2;
   font-size: 18px;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
 
-.prev:hover, .next:hover { background: rgba(246,63,255,0.8); }
+.prev:hover,
+.next:hover {
+  background: rgba(246, 63, 255, 0.8);
+}
 
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -208,12 +211,18 @@ z-index: 2;
   box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
 }
 
-.prev { left: 30px; }
-.next { right: 30px; }
+.prev {
+  left: 30px;
+}
+.next {
+  right: 30px;
+}
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
   background-color: #130418;
   border: 2px solid #fff;
   box-shadow: 0 0 6px 4px rgba(255, 255, 255, 0.45);
   transform: translateY(-50%) scale(1.12);
 }
+
