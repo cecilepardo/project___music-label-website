@@ -21,6 +21,7 @@
 }
 
 @keyframes neonPulseUltimate {
+
   0%,
   100% {
     text-shadow: 0 0 20px #ffffff, 0 0 30px #f63fff, 0 0 40px #8400ff,
@@ -152,15 +153,13 @@ div {
   border: none;
   display: block;
   /* Filtre sombre + néon cyberpunk */
-  filter: grayscale(100%) brightness(15%) contrast(150%) saturate(150%)
-    hue-rotate(220deg);
+  filter: grayscale(100%) brightness(15%) contrast(150%) saturate(150%) hue-rotate(220deg);
   transition: filter 0.5s ease, transform 0.5s ease;
   transform: scale(1);
 }
 
 .map-container:hover iframe {
-  filter: grayscale(0%) brightness(25%) contrast(160%) saturate(180%)
-    hue-rotate(200deg);
+  filter: grayscale(0%) brightness(25%) contrast(160%) saturate(180%) hue-rotate(200deg);
   transform: scale(1.02);
 }
 
@@ -361,13 +360,11 @@ h3 {
   color: white;
   position: relative;
 
-  background: linear-gradient(
-    270deg,
-    #ffffff 0%,
-    #f63fff 40%,
-    #8400ff 70%,
-    #ffffff 100%
-  );
+  background: linear-gradient(270deg,
+      #ffffff 0%,
+      #f63fff 40%,
+      #8400ff 70%,
+      #ffffff 100%);
   background-size: 1200% 1200%;
   -webkit-background-clip: text;
   /* -webkit-text-fill-color: transparent; */
@@ -419,5 +416,3 @@ h3 {
   background-color: var(--blue);
   border: 1px solid var(--pink);
 }
-
-

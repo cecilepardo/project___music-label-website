@@ -19,17 +19,57 @@ const startAnimations = () => {
   });
 }
 
-startAnimations();
-
-const obsFade = new IntersectionObserver((entries) => {
+const counterObs = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add("newsAnim");
+      startAnimations()
     }
   });
 }, {
   threshold: 0.7
 });
-const fadeElement = document.querySelectorAll(".newsContainer");
 
-fadeElement.forEach((el) => obsFade.observe(el));
+const counters = document.querySelectorAll(".goCrazy");
+counters.forEach((el) => counterObs.observe(el));
+
+
+
+
+const scrollObs = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("newsAnim");
+    }     else {
+      entry.target.classList.remove("newsAnim");
+    }
+  });
+}, {
+  threshold: 0.7
+});
+
+const scrollAnim = document.querySelectorAll(".newsAllContainer");
+scrollAnim.forEach((el) => scrollObs.observe(el));
+
+
+const sectionSnap = document.querySelectorAll(".scrollSnap");
+
+const observerCallback = (entries) => {
+  entries.forEach(entry => {
+
+    const scrollItem = document.querySelector(`.${entry.target.dataset.scroll}`)
+
+    if (entry.isIntersecting) {
+      scrollItem.classList.add('scrollIndicatorToggle');
+    } else {
+      scrollItem.classList.remove('scrollIndicatorToggle');
+    }
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, {
+  threshold: 0.7
+});
+
+
+sectionSnap.forEach((el) => observer.observe(el));
+
