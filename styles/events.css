@@ -1,10 +1,6 @@
 @import url(/styles/style.css);
 
 :root {
-  --pink: #f63fff;
-  --blue: #8400ff;
-  --purple: #4d245b;
-  --dark: #130418;
   --text-light: #ffffff;
   --font-title: "Zalando Sans Expanded", sans-serif;
   --font-body: "Montserrat", sans-serif;
@@ -21,7 +17,6 @@
 }
 
 @keyframes neonPulseUltimate {
-
   0%,
   100% {
     text-shadow: 0 0 20px #ffffff, 0 0 30px #f63fff, 0 0 40px #8400ff,
@@ -32,20 +27,6 @@
     text-shadow: 0 0 30px #ffffff, 0 0 40px #f63fff, 0 0 50px #8400ff,
       0 0 60px #f63fff, 0 0 70px #ffffff;
   }
-}
-
-#backgroundTopo {
-  width: 100%;
-  z-index: -1;
-  position: fixed;
-  fill: rgba(254, 2, 198, 0.1);
-  stroke: rgba(254, 2, 198, 0.2);
-  stroke-width: 0.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 4000;
-  stroke-dashoffset: 4000;
-  animation: draw 6s ease-in-out infinite alternate;
 }
 
 @keyframes draw {
@@ -134,9 +115,9 @@ div {
   margin: 1.5rem 0;
   border-radius: 16px;
   overflow: hidden;
-  border: 3px solid #0f0f1a;
-  box-shadow: 0 0 30px 5px rgba(255, 0, 255, 0.6),
-    0 0 50px 15px rgba(0, 255, 255, 0.3);
+  /* border: 3px solid #0f0f1a; */
+  box-shadow: 0 0 30px 5px rgba(255, 0, 255, 0.5),
+    0 0 50px 15px rgba(0, 255, 255, 0.2);
   transition: all 0.5s ease-in-out;
 }
 
@@ -153,13 +134,15 @@ div {
   border: none;
   display: block;
   /* Filtre sombre + néon cyberpunk */
-  filter: grayscale(100%) brightness(15%) contrast(150%) saturate(150%) hue-rotate(220deg);
+  filter: grayscale(100%) brightness(15%) contrast(150%) saturate(150%)
+    hue-rotate(220deg);
   transition: filter 0.5s ease, transform 0.5s ease;
   transform: scale(1);
 }
 
 .map-container:hover iframe {
-  filter: grayscale(0%) brightness(25%) contrast(160%) saturate(180%) hue-rotate(200deg);
+  filter: grayscale(0%) brightness(25%) contrast(160%) saturate(180%)
+    hue-rotate(200deg);
   transform: scale(1.02);
 }
 
@@ -300,6 +283,7 @@ div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 1.5rem;
 }
 
 .text .button {
@@ -318,7 +302,6 @@ div {
 
 .text h2 {
   font-size: 1.8rem;
-  margin-bottom: 0.5rem;
 }
 
 .text p {
@@ -345,9 +328,10 @@ div {
 }
 
 .button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 10px 4px #f63fff;
-  color: #f63fff;
+  /* transform: translateY(-3px); */
+  transform: scale(1.1);
+  /* box-shadow: 0 0 10px 4px #f63fff;
+  color: #f63fff; */
 }
 
 /* Titres avec effet néon */
@@ -360,20 +344,20 @@ h3 {
   color: white;
   position: relative;
 
-  background: linear-gradient(270deg,
+  /* background: linear-gradient(270deg,
       #ffffff 0%,
       #f63fff 40%,
       #8400ff 70%,
-      #ffffff 100%);
-  background-size: 1200% 1200%;
-  -webkit-background-clip: text;
+      #ffffff 100%); */
+  /* background-size: 1200% 1200%;
+  -webkit-background-clip: text; */
   /* -webkit-text-fill-color: transparent; */
 
-  animation: gradientNeonSmooth 10s linear infinite,
-    neonPulseUltimate 2s ease-in-out infinite alternate;
+  /* animation: gradientNeonSmooth 10s linear infinite,
+    neonPulseUltimate 2s ease-in-out infinite alternate; */
 
-  text-shadow: 0 0 20px #ffffff, 0 0 30px #f63fff, 0 0 40px #8400ff,
-    0 0 50px #f63fff, 0 0 60px #ffffff;
+  /* text-shadow: 0 0 20px #ffffff, 0 0 30px #f63fff, 0 0 40px #8400ff, */
+  /* 0 0 50px #f63fff, 0 0 60px #ffffff; */
 }
 
 /* Animation d’apparition de la section principale */
@@ -405,6 +389,7 @@ h3 {
   display: flex;
   gap: 1rem;
   align-items: center;
+  justify-content: center;
 }
 
 /* Application de l’animation à la section en vedette */
@@ -415,4 +400,18 @@ h3 {
 .my-thing {
   background-color: var(--blue);
   border: 1px solid var(--pink);
+}
+
+.sauvetage {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+
+.section img{
+  transition: box-shadow 0.2s ease-in-out;
+}
+.section img:hover {
+  box-shadow: 0 0 25px rgba(230, 61, 237, 0.6);
 }

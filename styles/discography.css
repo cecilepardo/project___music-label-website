@@ -24,19 +24,6 @@ body {
   font-size: 3rem;
 }
 
-#backgroundTopo {
-  width: 100%;
-  z-index: -1;
-  position: fixed;
-  fill: rgba(254, 2, 198, 0.1);
-  stroke: rgba(254, 2, 198, 0.2);
-  stroke-width: 0.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 4000;
-  stroke-dashoffset: 4000;
-  animation: draw 6s ease-in-out infinite alternate;
-}
 
 @keyframes draw {
   to {

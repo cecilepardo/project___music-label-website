@@ -1,3 +1,5 @@
+@import url(/styles/style.css);
+
 .scrollSnap {
   height: 100%;
   scroll-snap-align: start;
@@ -360,3 +362,4 @@
   box-shadow: 0 0 30px 1px #dcd7df52;
   margin: 0 20px;
 }
+
