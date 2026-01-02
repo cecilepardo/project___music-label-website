@@ -1,103 +1,29 @@
-# NEON808
+# project___music-label-website
 
-**neon808** est un projet fictif de label musical créé par un groupe de sept membres.  
-L’objectif est de concevoir un site web moderne reflétant l’identité du label à travers le design, la musique et l’interactivité.
+This project is a team-based frontend web application simulating a music label website.  
+The goal was to design a modern and interactive site reflecting the identity of the label through design, music, and interactivity.
 
----
+## Purpose
 
-## Tech
-HTML, CSS, JavaScript (vanilla).
+The main objectives of this project were to:
+- Practice team collaboration on a frontend project
+- Build a responsive website with HTML, CSS, and JavaScript
+- Apply good coding practices and modular file structure
+- Deliver a maintainable and scalable frontend codebase
 
----
+## What I practiced
 
-## Règles de code
-Pour assurer cohérence et bonne collaboration :
+- Creating structured HTML pages for multiple sections (`index`, `about`, `contact`)  
+- Writing modular CSS with global (`style.css`) and page-specific files (`index.css`, `about.css`, `contact.css`)  
+- Adding interactivity using JavaScript (`main.js` for global functions, page-specific scripts for unique behaviors)  
+- Organizing assets (images, icons) for maintainability  
+- Collaborating with a team using Git and GitHub  
+- Following coding conventions: English for code/comments, camelCase for variables/functions, kebab-case for file names
 
-- **Code, commits et commentaires** : en anglais.  
-- **Variables, fonctions & classes** : camelCase.
-- **Noms de fichiers & assets** : kebab-case.
+## Status
 
-### Arborescence
-```
-projet/
-├── index.html
-├── about.html
-├── contact.html
-│
-├── styles/
-│   ├── style.css        # Styles généraux (layout, header, footer, couleurs globales)
-│   ├── index.css        # Styles spécifiques à la page d’accueil
-│   ├── about.css        # Styles spécifiques à la page “À propos”
-│   └── contact.css      # Styles spécifiques à la page “Contact”
-│
-├── js/
-│   ├── main.js          # Script global
-│   ├── index.js         # Script pour la page d’accueil
-│   ├── about.js         # Script pour la page “À propos”
-│   └── contact.js       # Script pour la page “Contact”
-│
-└── assets/
-    ├── images/          # Toutes les images du site
-    └── icons/           # Icônes SVG ou PNG
-```
+This project is completed as a team exercise.  
+It serves as a portfolio example of collaborative frontend development and modular design.
 
-### Bonnes pratiques à suivre
-
-- Un fichier HTML par page du site (`index.html`, `about.html`, `contact.html`, etc.).  
-- Un fichier CSS global (`style.css`) pour les styles communs : header, footer, typographie, couleurs, mise en page.  
-- Un fichier CSS par page pour les styles spécifiques (`index.css`, `about.css`, etc.).  
-- Un fichier JS global (`main.js`) pour les fonctions et interactions communes.  
-- Un fichier JS par page pour les interactions propres à chaque page (`index.js`, `about.js`, etc.).  
-- Toutes les ressources (images, icônes, etc.) sont regroupées dans le dossier `assets/`.  
-
----
-
-## Utilisation et importation des fichiers
-
-**Chaque page doit importer le fichier global `style.css`:**
-
-```css
-@import url("index.css");
-@import url("about.css");
-@import url("contact.css");
-```
-
-**Dans chaque page HTML, inclure uniquement le fichier CSS global, dans (`<head>`) :**
-
-```html
-<head>
-  <link rel="stylesheet" href="styles/style.css">
-</head>
-```
-
-**Pour les scripts JavaScript, inclure le fichier global, puis le fichier spécifique à la page, à la fin du fichier html:**
-
-```html
-  <script src="js/main.js"></script>
-  <script src="js/about.js"></script>
-</body>
-```
-
-### Pourquoi cette structure est efficace
-
-**Lisibilité :** chaque fichier a un rôle clair et identifiable.
-
-**Travail en équipe facilité :** chaque membre peut gérer une page ou un composant sans conflit.
-
-**Modularité :** ajout de nouvelles pages ou sections sans désorganiser le projet.
-
-**Maintenance simplifiée :** centralisation des styles et scripts facilite la mise à jour.
-
-**Évolutif :** la structure peut facilement évoluer vers des outils plus avancés (préprocesseurs CSS, systèmes de build, etc.).
-
-## Équipe
-| Nom      | GitHub                                        |
-|----------|-----------------------------------------------|
-| Juliette | [ici](https://github.com/GigiJuliette)       |
-| Cecile   | [ici](https://github.com/cecilepardo)        |
-| Maxime   | [ici](https://github.com/maxloir-dev)        |
-| Teddy    | [ici](https://github.com/Mob-y)              |
-| Romain   | [ici](https://github.com/Romain-77)          |
-| Thomas   | [ici](https://github.com/Thomaspupu)         |
-| Joel     | [ici](https://github.com/grace)              |
+## Project Structure
 
